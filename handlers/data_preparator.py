@@ -9,48 +9,86 @@ from utils.graph_algorithm import build_concept_graph, random_walk_sampling
 
 
 # 构建数学提取消息的函数
-def construct_math_extraction_messages(num=100):
-    parquet_file = 'files/GSM8K.parquet'  # Parquet文件的路径
-    extraction_file = 'files/math_extraction.json'  # 已提取数据存储文件的路径
+def construct_math_extraction_messages(file_path, required_fields, num=100):
+    """
+    通用的数据提取函数，根据文件后缀自动判断文件类型，并生成提取消息。
 
-    # 读取Parquet文件的前num条数据
-    df = pd.read_parquet(parquet_file).head(num)
+    :param file_path: 数据文件的路径
+    :param required_fields: 字典形式，指定所需字段，如 {'question': 'problem', 'answer': 'solution', 'id': 'id'}
+    :param num: 要提取的数据条数，默认为100
+    :return: 消息列表和元数据列表
+    """
 
-    # 如果提取文件存在，则读取已经处理过的数据
-    if os.path.exists(extraction_file):
-        with open(extraction_file, 'r', encoding='utf-8') as ex_file:
+    # 保存数据的文件路径
+    save_path = "files/math_extraction.json"
+
+    # 获取文件的后缀名以确定文件类型
+    _, file_extension = os.path.splitext(file_path)
+    file_extension = file_extension.lower()
+
+    # 根据文件类型读取数据
+    if file_extension == '.json':
+        # 读取JSON文件并将其转换为Python对象
+        with open(file_path, 'r', encoding='utf-8') as f:
+            data = json.load(f)
+    elif file_extension == '.csv':
+        # 读取CSV文件并将其转换为字典列表
+        data = pd.read_csv(file_path).to_dict(orient='records')
+    elif file_extension == '.tsv':
+        # 读取TSV文件并将其转换为字典列表
+        data = pd.read_csv(file_path, sep='\t').to_dict(orient='records')
+    elif file_extension == '.xlsx':
+        # 读取Excel文件并将其转换为字典列表
+        data = pd.read_excel(file_path).to_dict(orient='records')
+    elif file_extension == '.parquet':
+        # 读取Parquet文件并将其转换为字典列表
+        data = pd.read_parquet(file_path).to_dict(orient='records')
+    else:
+        # 如果提供的文件类型不受支持，则抛出错误
+        raise ValueError(f"Unsupported file extension: {file_extension}")
+
+    # 如果保存的文件路径存在，则读取已经处理过的数据
+    if os.path.exists(save_path):
+        # 打开并加载已提取的数据文件
+        with open(save_path, 'r', encoding='utf-8') as ex_file:
             processed_data = json.load(ex_file)
             processed_ids = {item['id'] for item in processed_data}  # 获取已处理的ID集合
             existing_count = len(processed_data)  # 已处理的数据条数
     else:
-        processed_ids = set()  # 如果文件不存在，初始化为空集合
-        existing_count = 0  # 初始化已处理条数为0
+        # 如果文件不存在，初始化为一个空集合和已处理条数为0
+        processed_ids = set()
+        existing_count = 0
 
     # 计算需要生成的新数据条数
     num_to_generate = num - existing_count
     if num_to_generate <= 0:
-        print(f"Math Extraction: Already have {existing_count} messages, no new messages generated.")
+        print(f"Extraction: Already have {existing_count} messages, no new messages generated.")
         return [], []  # 如果已有数据足够，则不生成新数据
 
     messages_list = []
     metadata_list = []
 
-    # 遍历Parquet文件中的数据，生成新的提取消息
-    for index, row in df.iterrows():
-        row_id = index
-        if row_id in processed_ids:
+    # 遍历数据并生成新的提取消息
+    for item in data:
+        item_id = item[required_fields['id']]
+        if item_id in processed_ids:
             continue  # 跳过已经处理过的数据
 
-        question = row['question']
-        answer = row['answer']
-        prompt = MATH_EXTRACTION_PROMPT.format(question=question)  # 根据问题生成提取提示
+        # 从数据项中提取问题和答案
+        question = item[required_fields['question']]
+        answer = item[required_fields['answer']]
+        # 根据问题生成提取提示
+        prompt = MATH_EXTRACTION_PROMPT.format(question=question)
+        # 将消息添加到消息列表中
         messages_list.append([{"role": "user", "content": prompt}])
-        metadata_list.append({"question": question, "answer": answer, "id": row_id})
+        # 将元数据添加到元数据列表中
+        metadata_list.append({"question": question, "answer": answer, "id": item_id})
 
         if len(messages_list) >= num_to_generate:
             break  # 如果生成的数据条数达到了需要生成的数量，则停止生成
 
-    return messages_list, metadata_list  # 返回生成的消息列表和元数据列表
+    # 返回生成的消息列表和元数据列表
+    return messages_list, metadata_list
 
 
 # 构建数学生成消息的函数
