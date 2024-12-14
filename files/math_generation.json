@@ -1,0 +1,690 @@
+[
+  {
+    "id": 0,
+    "question": "** \n\nImagine you have a magical calculator that shows the result of dividing 1 by 3 as a repeating decimal. If you write down the first 5 digits after the decimal point, what would they be? Then, can you show how this repeating decimal (0.333...) can be written as a fraction?\n\n**",
+    "answer": "**\n\nFirst, let's find out the first 5 digits after the decimal point when you divide 1 by 3. When you do the division, you get 0.33333..., where the digit '3' repeats indefinitely. So, the first 5 digits are 33333.\n\nNow, let's convert the repeating decimal 0.333... into a fraction. We'll use a simple algebraic method:\n\n1. Let \\(x = 0.333...\\)\n2. Multiply both sides of the equation by 10 to shift the decimal point one place to the right: \\(10x = 3.333...\\)\n3. Now, subtract the original equation (\\(x = 0.333...\\)) from this new equation (\\(10x = 3.333...\\)):\n   \\[\n   10x - x = 3.333... - 0.333...\n   \\]\n4. This simplifies to:\n   \\[\n   9x = 3\n   \\]\n5. Solving for \\(x\\), we get:\n   \\[\n   x = \\frac{3}{9} = \\frac{1}{3}\n   \\]\n\nSo, the repeating decimal 0.333... is equivalent to the fraction \\(\\frac{1}{3}\\).",
+    "topics": [
+      "Converting Repeating Decimals to Fractions",
+      "Repeating Decimals"
+    ],
+    "knowledge_points": [
+      "Understanding how repeating decimals work",
+      "Basic arithmetic operations with fractions",
+      "Techniques for converting repeating decimals into fractions"
+    ],
+    "question_type": "Problem-Solving",
+    "difficulty": "Elementary School"
+  },
+  {
+    "id": 1,
+    "question": "Consider the statement: \"For any quadratic function, reflecting its graph across the y-axis will always result in the same graph.\" Provide a counterexample to disprove this statement.",
+    "answer": "A counterexample to disprove the statement can be found by considering the quadratic function \\(f(x) = x^2 - 4x + 3\\). When we reflect this graph across the y-axis, we get the function \\(g(x) = (-x)^2 - 4(-x) + 3 = x^2 + 4x + 3\\). The graphs of \\(f(x)\\) and \\(g(x)\\) are not the same; they have different shapes due to their distinct coefficients for the \\(x\\) term. This demonstrates that the given statement is false, as reflecting some quadratic functions across the y-axis does not result in the same graph. \n\nThis question challenges students to think about the symmetry properties of quadratic functions and how changing the sign of the \\(x\\) variable affects the graph.",
+    "topics": [
+      "Quadratic Functions",
+      "Intersection Points",
+      "Graph Transformations"
+    ],
+    "knowledge_points": [
+      "Coefficients of Quadratic Equations",
+      "Graph of Quadratic Functions",
+      "Reflection Across Axes",
+      "Symmetry in Functions"
+    ],
+    "question_type": "Counterexample",
+    "difficulty": "Elementary School"
+  },
+  {
+    "id": 2,
+    "question": "** \n\nCompare and contrast the methods used to solve the linear equation \\(2x + 3 = 11\\) and the quadratic equation \\(x^2 - 5x + 6 = 0\\). In your answer, include how you would rearrange each equation to solve for \\(x\\), how you find the solutions for each, and how you interpret these solutions in the context of the problems they might represent. Which method do you think is more straightforward and why?\n\n**",
+    "answer": "**\n\nTo solve the linear equation \\(2x + 3 = 11\\):\n\n- **Rearranging the Equation:** Subtract 3 from both sides to get \\(2x = 8\\). Then divide both sides by 2 to isolate \\(x\\), resulting in \\(x = 4\\).\n- **Interpreting the Solution:** This solution indicates that if we substitute \\(x = 4\\) into the original equation, it will balance out. For example, \\(2(4) + 3 = 8 + 3 = 11\\).\n\nTo solve the quadratic equation \\(x^2 - 5x + 6 = 0\\):\n\n- **Setting Up the Equation:** This equation is already set up for solving.\n- **Finding Solutions:** We can factor the quadratic equation into \\((x - 2)(x - 3) = 0\\). Therefore, the solutions are \\(x = 2\\) and \\(x = 3\\).\n- **Interpreting the Solutions:** These solutions mean that substituting \\(x = 2\\) or \\(x = 3\\) into the original equation will make it true. For instance, \\(2^2 - 5(2) + 6 = 4 - 10 + 6 = 0\\) and \\(3^2 - 5(3) + 6 = 9 - 15 + 6 = 0\\).\n\nComparing the two methods, solving the linear equation involves simpler arithmetic steps (just addition/subtraction and division) and leads to a single solution. On the other hand, solving the quadratic equation requires factoring, which can be more complex and may result in two solutions. However, both methods rely on isolating \\(x\\) to understand what values satisfy the given equations. The linear equation's straightforward process makes it generally easier to solve compared to the quadratic, where the concept of multiple solutions needs to be grasped.",
+    "topics": [
+      "Algebra",
+      "Quadratic Equations"
+    ],
+    "knowledge_points": [
+      "Rearranging equations",
+      "Setting up an equation from a word problem",
+      "Interpreting solutions in context",
+      "Solving quadratic equations"
+    ],
+    "question_type": "Comparison and Contrast",
+    "difficulty": "Middle School"
+  },
+  {
+    "id": 3,
+    "question": "**\n\nProve that the product of any three consecutive integers is always divisible by 6. \n\nIn other words, for any integer \\( n \\), show that the expression \\( n(n+1)(n+2) \\) is divisible by 6.\n\n**",
+    "answer": "**\n\nTo prove that the product of any three consecutive integers is always divisible by 6, we need to show that it is divisible by both 2 and 3 since 6 = 2 × 3.\n\n1. **Divisibility by 2:** \n   - Among any three consecutive integers, there must be at least one even number. This is because every second integer is even.\n   - Therefore, the product \\( n(n+1)(n+2) \\) includes an even number, making the entire product even and thus divisible by 2.\n\n2. **Divisibility by 3:**\n   - Among any three consecutive integers, there must be exactly one multiple of 3. This is because every third integer is a multiple of 3.\n   - Therefore, the product \\( n(n+1)(n+2) \\) includes a multiple of 3, making the entire product divisible by 3.\n\nSince the product \\( n(n+1)(n+2) \\) is divisible by both 2 and 3, it is also divisible by their least common multiple, which is 6.\n\nTherefore, the product of any three consecutive integers is always divisible by 6.",
+    "topics": [
+      "Product and Factors",
+      "Consecutive Numbers"
+    ],
+    "knowledge_points": [
+      "Calculating Product",
+      "Understanding Consecutive Integers",
+      "Summation of Numbers",
+      "Factorization Techniques"
+    ],
+    "question_type": "Proof",
+    "difficulty": "Middle School"
+  },
+  {
+    "id": 4,
+    "question": "** \n\nConstruct a regular hexagon \\(ABCDEF\\) inscribed in a circle with a radius of 6 units. Then, using the properties of midpoints and polygons, find the perimeter of the hexagon formed by connecting the midpoints of each side of the original hexagon \\(ABCDEF\\).\n\n**",
+    "answer": "**\n\nTo solve this problem, follow these steps:\n\n1. **Understanding the Hexagon Construction:**\n   - A regular hexagon can be inscribed in a circle where each vertex of the hexagon touches the circumference of the circle.\n   - For a regular hexagon inscribed in a circle, the radius of the circle is equal to the side length of the hexagon. Therefore, the side length of the hexagon \\(ABCDEF\\) is 6 units.\n\n2. **Finding the Perimeter of the Original Hexagon:**\n   - Since the hexagon is regular, all sides are equal. Therefore, the perimeter of the hexagon \\(ABCDEF\\) is \\(6 \\times 6 = 36\\) units.\n\n3. **Connecting Midpoints to Form a New Hexagon:**\n   - Let \\(M_1, M_2, M_3, M_4, M_5,\\) and \\(M_6\\) be the midpoints of the sides \\(AB, BC, CD, DE, EF,\\) and \\(FA\\), respectively.\n   - When you connect these midpoints, they form another regular hexagon inside the original one. This new hexagon is similar to the original hexagon but scaled down.\n\n4. **Determining the Side Length of the New Hexagon:**\n   - The distance between two consecutive midpoints (which becomes the side length of the new hexagon) is equal to the height of an equilateral triangle formed by two adjacent vertices of the original hexagon and its center.\n   - In an equilateral triangle, the height \\(h\\) can be calculated using the formula \\(h = \\frac{\\sqrt{3}}{2} \\times \\text{side length}\\).\n   - For the original hexagon, the height is \\(\\frac{\\sqrt{3}}{2} \\times 6 = 3\\sqrt{3}\\) units.\n   - However, for the new hexagon formed by the midpoints, the side length is half of the height of the equilateral triangle formed by the original hexagon's side and its center, which is \\(3\\sqrt{3}/2 = 3/\\sqrt{3} = 3\\).\n\n5. **Calculating the Perimeter of the New Hexagon:**\n   - Since the new hexagon is also regular, all sides are equal. Therefore, the perimeter of the new hexagon is \\(6 \\times 3 = 18\\) units.\n\nThus, the perimeter of the hexagon formed by connecting the midpoints of each side of the original hexagon \\(ABCDEF\\) is **18 units**.",
+    "topics": [
+      "Geometry"
+    ],
+    "knowledge_points": [
+      "Polygon Properties",
+      "Midpoint Calculation"
+    ],
+    "question_type": "Construction",
+    "difficulty": "High School"
+  },
+  {
+    "id": 5,
+    "question": "**\nImagine you have a magical garden where every day, the number of flowers doubles. On the first day, you have 2 flowers. How many flowers will you have on the 5th day? Write down the number of flowers you would have on each day from the 1st to the 5th day.\n\n**",
+    "answer": "**\nTo solve this problem, we can use the concept of a geometric sequence where the number of flowers doubles each day. This means the sequence follows the pattern \\(a_n = a_1 \\times r^{(n-1)}\\), where \\(a_1\\) is the first term, \\(r\\) is the common ratio (in this case, 2 because the number of flowers doubles each day), and \\(n\\) is the term number.\n\n- Day 1 (\\(n=1\\)): \\(a_1 = 2\\)\n- Day 2 (\\(n=2\\)): \\(a_2 = 2 \\times 2^{(2-1)} = 4\\)\n- Day 3 (\\(n=3\\)): \\(a_3 = 2 \\times 2^{(3-1)} = 8\\)\n- Day 4 (\\(n=4\\)): \\(a_4 = 2 \\times 2^{(4-1)} = 16\\)\n- Day 5 (\\(n=5\\)): \\(a_5 = 2 \\times 2^{(5-1)} = 32\\)\n\nSo, on the 5th day, you will have 32 flowers. The number of flowers on each day from the 1st to the 5th day are 2, 4, 8, 16, and 32 respectively.",
+    "topics": [
+      "Geometric Sequences",
+      "Exponential and Logarithmic Functions"
+    ],
+    "knowledge_points": [
+      "Formula for the nth term of a geometric sequence",
+      "Definition and properties of geometric sequences",
+      "Solving equations involving powers and roots"
+    ],
+    "question_type": "Construction",
+    "difficulty": "Elementary School"
+  },
+  {
+    "id": 6,
+    "question": "**\n\nConstruct an algebraic expression that represents the length of a rectangle if its width is $\\frac{1}{3}$ of its length, and the perimeter of the rectangle is less than 24 units. Use algebraic manipulation to express the length in terms of an inequality involving the perimeter. Then, simplify the expression and determine the interval notation for all possible lengths of the rectangle.\n\n**",
+    "answer": "**\n\nLet $L$ represent the length of the rectangle and $W$ represent the width of the rectangle. According to the problem, the width $W$ is $\\frac{1}{3}$ of the length $L$, so we can write:\n\n\\[ W = \\frac{1}{3}L \\]\n\nThe perimeter $P$ of a rectangle is given by the formula:\n\n\\[ P = 2(L + W) \\]\n\nSubstituting the value of $W$ into the perimeter formula gives:\n\n\\[ P = 2\\left(L + \\frac{1}{3}L\\right) \\]\n\nSimplifying inside the parentheses:\n\n\\[ P = 2\\left(\\frac{3}{3}L + \\frac{1}{3}L\\right) \\]\n\\[ P = 2\\left(\\frac{4}{3}L\\right) \\]\n\\[ P = \\frac{8}{3}L \\]\n\nAccording to the problem, the perimeter is less than 24 units, so we have:\n\n\\[ \\frac{8}{3}L < 24 \\]\n\nTo solve for $L$, multiply both sides of the inequality by $\\frac{3}{8}$:\n\n\\[ L < 24 \\cdot \\frac{3}{8} \\]\n\\[ L < 9 \\]\n\nTherefore, the interval notation for all possible lengths of the rectangle is:\n\n\\[ (0, 9) \\]\n\nNote: The length must be greater than 0 because a length of zero or negative would not make sense for a physical rectangle.",
+    "topics": [
+      "Fractions",
+      "Inequalities"
+    ],
+    "knowledge_points": [
+      "Algebraic Manipulation",
+      "Handling Inequalities with Variables",
+      "Interval Notation",
+      "Expression Simplification"
+    ],
+    "question_type": "Construction",
+    "difficulty": "Middle School"
+  },
+  {
+    "id": 7,
+    "question": "**  \nConsider the sequence of logarithmic expressions given below:\n\n\\[\n\\log_2 \\frac{1}{2}, \\quad \\log_2 \\frac{1}{4}, \\quad \\log_2 \\frac{1}{8}, \\quad \\log_2 \\frac{1}{16}, \\quad \\ldots\n\\]\n\nIdentify the underlying pattern or rule governing this sequence. Then, using this rule, determine the value of the 10th term in the sequence. Show all steps in your simplification process and explain how you applied logarithm properties and principles.\n\n**",
+    "answer": "**  \nTo identify the underlying pattern in the given sequence, let's first simplify each term using logarithm properties.\n\nThe given sequence is:\n\n\\[\n\\log_2 \\frac{1}{2}, \\quad \\log_2 \\frac{1}{4}, \\quad \\log_2 \\frac{1}{8}, \\quad \\log_2 \\frac{1}{16}, \\quad \\ldots\n\\]\n\nWe can rewrite each fraction as a power of 2:\n\n\\[\n\\log_2 \\frac{1}{2} = \\log_2 (2^{-1}) = -1\n\\]\n\n\\[\n\\log_2 \\frac{1}{4} = \\log_2 (2^{-2}) = -2\n\\]\n\n\\[\n\\log_2 \\frac{1}{8} = \\log_2 (2^{-3}) = -3\n\\]\n\n\\[\n\\log_2 \\frac{1}{16} = \\log_2 (2^{-4}) = -4\n\\]\n\nFrom these calculations, we observe that each term in the sequence is the negative of the exponent of the corresponding power of 2. Specifically, the \\(n\\)th term of the sequence is \\(-n\\).\n\nTo find the value of the 10th term, we substitute \\(n = 10\\):\n\n\\[\n\\text{10th term} = -10\n\\]\n\nThus, the value of the 10th term in the sequence is \\(\\boxed{-10}\\).",
+    "topics": [
+      "Logarithms"
+    ],
+    "knowledge_points": [
+      "Simplification of logarithmic expressions",
+      "Logarithm properties",
+      "Handling fractional and radical expressions in logarithms",
+      "Logarithm values for arguments between 0 and 1"
+    ],
+    "question_type": "Inductive Reasoning",
+    "difficulty": "High School"
+  },
+  {
+    "id": 8,
+    "question": "**Construct a square with an area equal to 16 square units. Then, find the length of one side of this square. Can you also find another square whose area is twice that of the first square? What would be the length of one side of this second square?**\n\n###",
+    "answer": "To solve this problem, let's break it down step-by-step:\n\n1. **First Square Construction:**\n   - We need a square with an area of 16 square units.\n   - The formula for the area of a square is \\(A = s^2\\), where \\(s\\) is the length of one side.\n   - To find \\(s\\), we solve \\(s^2 = 16\\).\n   - Taking the square root of both sides gives us \\(s = \\sqrt{16}\\).\n   - Since \\(\\sqrt{16} = 4\\), the length of one side of the first square is 4 units.\n\n2. **Second Square Construction:**\n   - Now, we need to construct a square whose area is twice that of the first square.\n   - Twice the area of the first square is \\(2 \\times 16 = 32\\) square units.\n   - Using the formula for the area of a square again, we have \\(s^2 = 32\\).\n   - To find \\(s\\), we solve for \\(s = \\sqrt{32}\\).\n   - Since \\(\\sqrt{32}\\) is not a whole number, we simplify it to \\(\\sqrt{32} = \\sqrt{16 \\times 2} = 4\\sqrt{2}\\).\n   - Thus, the length of one side of the second square is \\(4\\sqrt{2}\\) units.\n\nThis question focuses on the fundamental concept of square roots, using them to construct geometric figures and understand their properties, all while keeping the problem within the reach of an elementary school student's understanding.",
+    "topics": [
+      "Square Roots"
+    ],
+    "knowledge_points": [
+      "Properties of Square Roots",
+      "Domain Considerations",
+      "Solving Inequalities",
+      "Triangle Inequality Theorem",
+      "Integer Solutions"
+    ],
+    "question_type": "Construction",
+    "difficulty": "Elementary School"
+  },
+  {
+    "id": 9,
+    "question": "**\n\nConsider the sequence of equations defined recursively as follows:\n\n\\[a_1 = \\sqrt{2},\\]\n\\[a_{n+1} = \\sqrt{2 + a_n}.\\]\n\nDetermine the general form for \\(a_n\\) in terms of radicals. Then, prove that the sequence \\(\\{a_n\\}\\) converges and find its limit. Finally, analyze the behavior of the sequence within the interval determined by its roots, and discuss how this convergence relates to solving quadratic equations and simplification of equations with radicals.\n\n---\n\n**",
+    "answer": "**\n\nTo determine the general form for \\(a_n\\), we start by hypothesizing that the sequence might converge to some limit \\(L\\). If the sequence converges, then the limit \\(L\\) must satisfy the equation:\n\n\\[L = \\sqrt{2 + L}.\\]\n\nSquaring both sides gives:\n\n\\[L^2 = 2 + L,\\]\n\\[L^2 - L - 2 = 0.\\]\n\nThis is a quadratic equation. We solve it using the quadratic formula \\(L = \\frac{-b \\pm \\sqrt{b^2 - 4ac}}{2a}\\), where \\(a = 1\\), \\(b = -1\\), and \\(c = -2\\):\n\n\\[L = \\frac{1 \\pm \\sqrt{1 + 8}}{2} = \\frac{1 \\pm 3}{2}.\\]\n\nThus, the solutions are \\(L = 2\\) and \\(L = -1\\). Since \\(a_n\\) is a sequence of positive numbers (starting from \\(\\sqrt{2}\\)), the only feasible solution is \\(L = 2\\).\n\nTo prove that the sequence converges to 2, we need to show that \\(a_n\\) is increasing and bounded above by 2. \n\nFirst, we show that \\(a_n < 2\\) for all \\(n\\). This can be done by induction:\n- Base case: \\(a_1 = \\sqrt{2} < 2\\).\n- Inductive step: Assume \\(a_n < 2\\). Then,\n\\[a_{n+1} = \\sqrt{2 + a_n} < \\sqrt{2 + 2} = \\sqrt{4} = 2.\\]\n\nNext, we show that \\(a_n\\) is increasing:\n- Consider \\(a_{n+1} - a_n = \\sqrt{2 + a_n} - a_n\\). To show this is positive, we rationalize the numerator:\n\\[\\sqrt{2 + a_n} - a_n = \\frac{(2 + a_n) - a_n^2}{\\sqrt{2 + a_n} + a_n} = \\frac{2 + a_n - a_n^2}{\\sqrt{2 + a_n} + a_n}.\\]\nSince \\(a_n < 2\\), we have \\(2 + a_n > a_n^2\\), making the numerator positive. Thus, \\(a_{n+1} > a_n\\).\n\nTherefore, the sequence is increasing and bounded above by 2, so it converges to 2.\n\nFinally, the behavior of the sequence within the interval determined by its roots can be analyzed by considering the roots of the quadratic equation \\(x^2 - x - 2 = 0\\), which are -1 and 2. Since the sequence starts positive and is increasing, it remains within the interval \\((0, 2)\\), approaching 2 as \\(n\\) increases. This convergence is consistent with solving quadratic equations and simplifying equations involving radicals, as the sequence's behavior is closely tied to the roots and intervals determined by these roots.\n\nIn summary, the sequence \\(\\{a_n\\}\\) converges to 2, and this result can be linked back to solving quadratic equations and analyzing the behavior of sequences within specific intervals.",
+    "topics": [
+      "Radicals"
+    ],
+    "knowledge_points": [
+      "Cross Multiplication",
+      "Simplification of Equations with Radicals",
+      "Solving Quadratic Equations",
+      "Roots of Quadratic Equations",
+      "Intervals Determined by Roots"
+    ],
+    "question_type": "Inductive Reasoning",
+    "difficulty": "Undergraduate"
+  },
+  {
+    "id": 10,
+    "question": "Consider the sequence of square numbers \\(S_n = n^2\\), where \\(n\\) is a positive integer. Develop a novel algebraic identity or a set of identities involving \\(S_n\\) that can be used to express any square number as a sum or difference of other square numbers in a non-trivial way. Furthermore, explore how these identities can be applied to solve Diophantine equations of the form \\(x^2 + y^2 = z^2 + k\\), where \\(k\\) is a given constant, and \\(x, y, z\\) are integers. Discuss the implications of your findings on the structure of square numbers and their relationships within the set of integers.",
+    "answer": "One possible approach to develop an algebraic identity involving square numbers is to utilize the Brahmagupta–Fibonacci identity, which states that the product of two sums of squares is itself a sum of squares:\n\n\\[\n(a^2 + b^2)(c^2 + d^2) = (ac - bd)^2 + (ad + bc)^2 = (ac + bd)^2 + (ad - bc)^2.\n\\]\n\nBy leveraging this identity, we can express a square number \\(S_n = n^2\\) as a sum or difference of other square numbers. For example, if we choose \\(a = c = 1\\) and \\(b = d = n-1\\), we get:\n\n\\[\n(1^2 + (n-1)^2)(1^2 + (n-1)^2) = ((1 \\cdot 1 - (n-1)^2))^2 + ((1 \\cdot (n-1) + 1 \\cdot (n-1)))^2,\n\\]\nwhich simplifies to:\n\n\\[\nn^2 \\cdot n^2 = (1 - (n-1)^2)^2 + (2(n-1))^2.\n\\]\n\nThis provides one way to express \\(n^4\\) as a sum of squares, from which we can derive expressions for \\(n^2\\) by considering specific cases.\n\nTo apply these identities to solve Diophantine equations of the form \\(x^2 + y^2 = z^2 + k\\), we can use the derived identities to find suitable values of \\(x, y,\\) and \\(z\\) that satisfy the equation. For instance, choosing \\(x = ac - bd\\), \\(y = ad + bc\\), and \\(z = ac + bd\\) for some \\(a, b, c, d\\) such that \\(a^2 + b^2 = x^2 + y^2\\) and \\(c^2 + d^2 = z^2 + k\\), we can ensure that the equation holds true.\n\nThe implications of these findings on the structure of square numbers and their relationships within the set of integers include insights into the additive properties of squares and how they can be decomposed or combined in various ways. This could lead to new methods for solving Diophantine equations and a deeper understanding of the arithmetic properties of integers.",
+    "topics": [
+      "Algebraic identities",
+      "Arithmetic operations"
+    ],
+    "knowledge_points": [
+      "Understanding of square numbers"
+    ],
+    "question_type": "Open-Ended",
+    "difficulty": "PhD"
+  },
+  {
+    "id": 11,
+    "question": "** \n\nImagine you have a magical machine that takes any number you put in and performs a special operation. This machine has two settings: \n\n- **Setting A**: It multiplies the number by 2 and then adds 3.\n- **Setting B**: It subtracts 4 from the number.\n\nNow, let's call the operation of Setting A as function \\(f(x)\\) and the operation of Setting B as function \\(g(x)\\). If you start with the number 5 and first use Setting A (function \\(f\\)), then immediately after use Setting B (function \\(g\\)), what number will come out of the machine? \n\nNext, if you start again with the number 5 but this time first use Setting B (function \\(g\\)), then immediately after use Setting A (function \\(f\\)), what number will come out now? \n\nCompare the results. What do you notice about the order in which you apply the functions?\n\n**",
+    "answer": "**\n\nTo solve this problem, we need to understand how to apply functions one after another, also known as function composition.\n\n1. **First scenario:** Start with 5, use \\(f\\) (Setting A), then use \\(g\\) (Setting B).\n\n   - First, apply \\(f(x)\\) to 5:\n     \\[ f(5) = 2 \\times 5 + 3 = 10 + 3 = 13 \\]\n   - Then, apply \\(g(x)\\) to the result:\n     \\[ g(13) = 13 - 4 = 9 \\]\n\n   So, when you start with 5, use \\(f\\), then \\(g\\), the final number is **9**.\n\n2. **Second scenario:** Start with 5, use \\(g\\) (Setting B), then use \\(f\\) (Setting A).\n\n   - First, apply \\(g(x)\\) to 5:\n     \\[ g(5) = 5 - 4 = 1 \\]\n   - Then, apply \\(f(x)\\) to the result:\n     \\[ f(1) = 2 \\times 1 + 3 = 2 + 3 = 5 \\]\n\n   So, when you start with 5, use \\(g\\), then \\(f\\), the final number is **5**.\n\n**Comparison:** When we compare the results, we notice that the order in which we apply the functions affects the outcome. In the first scenario, starting with \\(f\\) and then \\(g\\), we get 9. In the second scenario, starting with \\(g\\) and then \\(f\\), we get 5. This shows us that function composition is not commutative; the order matters!",
+    "topics": [
+      "Function Composition"
+    ],
+    "knowledge_points": [
+      "Effect of Repeated Linear Function Applications",
+      "Understanding and applying function composition",
+      "Performing arithmetic operations in the context of evaluating functions",
+      "Evaluating a function at a given point"
+    ],
+    "question_type": "Analytical Reasoning",
+    "difficulty": "Elementary School"
+  },
+  {
+    "id": 12,
+    "question": "**\n\nA high school student is designing a garden in the shape of a rectangle where the length is represented by \\(L\\) and the width by \\(W\\). The student decides to use the area of the garden, which is given by \\(A = L \\times W\\), to create a pathway around it. The total area covered by the pathway is equal to the area of the garden itself, meaning the pathway's area is also \\(A\\).\n\nThe student also wants the perimeter of the garden, \\(P = 2(L + W)\\), to be such that when you apply the ceiling function to half of the perimeter, the result is an integer value. In other words, \\(\\lceil \\frac{P}{2} \\rceil\\) must be an integer.\n\nGiven that the area of the garden is \\(A = 144\\) square meters, find the dimensions \\(L\\) and \\(W\\) of the garden that satisfy these conditions. Additionally, determine the perimeter of the garden and verify that \\(\\lceil \\frac{P}{2} \\rceil\\) is indeed an integer.\n\n**",
+    "answer": "**\n\nTo solve this problem, we start by noting that the area of the garden is \\(A = L \\times W = 144\\) square meters. We need to find \\(L\\) and \\(W\\) such that the perimeter \\(P = 2(L + W)\\) satisfies the condition \\(\\lceil \\frac{P}{2} \\rceil\\) is an integer.\n\nFirst, let's express \\(W\\) in terms of \\(L\\) using the area equation:\n\\[ W = \\frac{144}{L} \\]\n\nNext, substitute \\(W\\) into the perimeter formula:\n\\[ P = 2\\left(L + \\frac{144}{L}\\right) \\]\n\nFor \\(\\lceil \\frac{P}{2} \\rceil\\) to be an integer, \\(\\frac{P}{2}\\) must be within 0.5 of an integer. This means \\(\\frac{P}{2}\\) must be an integer because if it were not, it would round up or down to a non-integer value when applying the ceiling function.\n\nSo, we need:\n\\[ \\frac{P}{2} = L + \\frac{144}{L} \\]\nto be an integer.\n\nLet's test some possible integer values for \\(L\\) that divide 144 evenly:\n\n1. If \\(L = 12\\):\n   \\[ W = \\frac{144}{12} = 12 \\]\n   \\[ P = 2(12 + 12) = 48 \\]\n   \\[ \\frac{P}{2} = 24 \\]\n   Since 24 is an integer, \\(\\lceil 24 \\rceil = 24\\).\n\nThus, one solution is \\(L = 12\\) and \\(W = 12\\), making the perimeter \\(P = 48\\) meters, and \\(\\lceil \\frac{P}{2} \\rceil = 24\\) is indeed an integer.\n\nTherefore, the dimensions of the garden are \\(L = 12\\) meters and \\(W = 12\\) meters, with a perimeter of \\(P = 48\\) meters.",
+    "topics": [
+      "Arithmetic Operations",
+      "Algebra"
+    ],
+    "knowledge_points": [
+      "Concept and application of the ceiling function",
+      "Manipulating Quadratic Equations",
+      "Solving Quadratic Equations"
+    ],
+    "question_type": "Construction",
+    "difficulty": "High School"
+  },
+  {
+    "id": 13,
+    "question": "**\n\nProve that for any real numbers \\(a\\), \\(b\\), and \\(c\\) (where \\(a \\neq 0\\)), if the quadratic equation \\(ax^2 + bx + c = 0\\) has real roots, then the expression \\(b^2 - 4ac\\) must be non-negative. Furthermore, show that if \\(b^2 - 4ac > 0\\), the quadratic equation has two distinct real roots, and if \\(b^2 - 4ac = 0\\), the quadratic equation has exactly one real root (a repeated root).\n\n**",
+    "answer": "**\n\nTo prove the given statement, we need to understand the conditions under which a quadratic equation \\(ax^2 + bx + c = 0\\) (with \\(a \\neq 0\\)) has real roots. This involves analyzing the discriminant of the quadratic equation, which is defined as \\(D = b^2 - 4ac\\).\n\n1. **Discriminant Analysis:**\n   - The discriminant \\(D\\) determines the nature of the roots of the quadratic equation.\n   - If \\(D > 0\\), the quadratic equation has two distinct real roots.\n   - If \\(D = 0\\), the quadratic equation has exactly one real root (a repeated root).\n   - If \\(D < 0\\), the quadratic equation has no real roots (the roots are complex).\n\n2. **Proof for Non-Negative Discriminant:**\n   - For the quadratic equation \\(ax^2 + bx + c = 0\\) to have real roots, the discriminant \\(D = b^2 - 4ac\\) must be non-negative.\n   - We start with the quadratic formula \\(x = \\frac{-b \\pm \\sqrt{b^2 - 4ac}}{2a}\\). For \\(x\\) to be real, the term inside the square root, \\(b^2 - 4ac\\), must be non-negative. Therefore, \\(b^2 - 4ac \\geq 0\\).\n\n3. **Proof for Two Distinct Real Roots:**\n   - If \\(b^2 - 4ac > 0\\), then the square root of \\(b^2 - 4ac\\) is a positive real number. Hence, the quadratic equation will have two distinct real roots given by \\(x_1 = \\frac{-b + \\sqrt{b^2 - 4ac}}{2a}\\) and \\(x_2 = \\frac{-b - \\sqrt{b^2 - 4ac}}{2a}\\).\n\n4. **Proof for One Real Root (Repeated Root):**\n   - If \\(b^2 - 4ac = 0\\), then the square root of \\(b^2 - 4ac\\) is zero. Thus, the quadratic equation will have exactly one real root (a repeated root), given by \\(x = \\frac{-b}{2a}\\).\n\nTherefore, we have shown that for any real numbers \\(a\\), \\(b\\), and \\(c\\) (with \\(a \\neq 0\\)), if the quadratic equation \\(ax^2 + bx + c = 0\\) has real roots, then \\(b^2 - 4ac\\) must be non-negative. Additionally, if \\(b^2 - 4ac > 0\\), the quadratic equation has two distinct real roots, and if \\(b^2 - 4ac = 0\\), the quadratic equation has exactly one real root (a repeated root).",
+    "topics": [
+      "Algebra",
+      "Arithmetic Operations"
+    ],
+    "knowledge_points": [
+      "Standard form of a quadratic equation",
+      "Rearranging equations",
+      "Exponentiation"
+    ],
+    "question_type": "Proof",
+    "difficulty": "High School"
+  },
+  {
+    "id": 14,
+    "question": "** \n\nConsider two circles given by the equations \\(x^2 + y^2 - 6x + 4y - 12 = 0\\) and \\(x^2 + y^2 + 8x - 10y + 32 = 0\\). Compare and contrast these two circles in terms of their centers and radii. Additionally, demonstrate how to convert each equation into its standard form using the method of completing the square, and explain why this method is effective for determining the center and radius of a circle from its general form.\n\n**",
+    "answer": "**\n\nTo compare and contrast the two circles, we first need to determine their centers and radii. We will do this by converting each equation into its standard form \\((x-h)^2 + (y-k)^2 = r^2\\), where \\((h,k)\\) is the center and \\(r\\) is the radius.\n\nFor the first circle given by \\(x^2 + y^2 - 6x + 4y - 12 = 0\\):\n\n1. **Group and complete the square for \\(x\\) and \\(y\\):**\n   - For \\(x\\): \\(x^2 - 6x\\) can be rewritten as \\((x-3)^2 - 9\\).\n   - For \\(y\\): \\(y^2 + 4y\\) can be rewritten as \\((y+2)^2 - 4\\).\n\n2. **Substitute back into the original equation:**\n   \\((x-3)^2 - 9 + (y+2)^2 - 4 - 12 = 0\\)\n   Simplifying gives us \\((x-3)^2 + (y+2)^2 = 25\\).\n\nFrom this, we can see that the center of the first circle is \\((3, -2)\\) and the radius is \\(\\sqrt{25} = 5\\).\n\nFor the second circle given by \\(x^2 + y^2 + 8x - 10y + 32 = 0\\):\n\n1. **Group and complete the square for \\(x\\) and \\(y\\):**\n   - For \\(x\\): \\(x^2 + 8x\\) can be rewritten as \\((x+4)^2 - 16\\).\n   - For \\(y\\): \\(y^2 - 10y\\) can be rewritten as \\((y-5)^2 - 25\\).\n\n2. **Substitute back into the original equation:**\n   \\((x+4)^2 - 16 + (y-5)^2 - 25 + 32 = 0\\)\n   Simplifying gives us \\((x+4)^2 + (y-5)^2 = 9\\).\n\nFrom this, we can see that the center of the second circle is \\((-4, 5)\\) and the radius is \\(\\sqrt{9} = 3\\).\n\n**Comparison and Contrast:**\n\n- **Centers:** The centers of the circles are different, with the first circle centered at \\((3, -2)\\) and the second at \\((-4, 5)\\).\n- **Radii:** The radii are also different, with the first circle having a radius of 5 units and the second having a radius of 3 units.\n- **Completing the Square Method:** This method is effective because it transforms the general form of the circle equation into the standard form, making it straightforward to identify the center and radius directly from the equation. By completing the square, we isolate perfect squares, which allows us to easily solve for the center and radius.\n\nThis method highlights the importance of algebraic manipulation in geometry, showing how abstract algebraic techniques can provide clear geometric insights.",
+    "topics": [
+      "Circle Equations"
+    ],
+    "knowledge_points": [
+      "Center and Radius of a Circle",
+      "Completing the Square",
+      "Standard Form of a Circle Equation"
+    ],
+    "question_type": "Comparison and Contrast",
+    "difficulty": "High School"
+  },
+  {
+    "id": 15,
+    "question": "Find a counterexample to show that the statement \"The sum of the roots of any quadratic equation \\(ax^2 + bx + c = 0\\) is always greater than zero\" is not always true.",
+    "answer": "A counterexample to disprove the statement can be found using the quadratic equation \\(x^2 - 3x + 2 = 0\\). For this equation, the coefficients are \\(a = 1\\), \\(b = -3\\), and \\(c = 2\\). According to the relation between the roots and coefficients, the sum of the roots (\\(r_1 + r_2\\)) is given by \\(-\\frac{b}{a}\\). Substituting the values, we get \\(-\\frac{-3}{1} = 3\\). However, if we choose another example such as \\(x^2 - x - 6 = 0\\), where \\(a = 1\\), \\(b = -1\\), and \\(c = -6\\), the sum of the roots is \\(-\\frac{-1}{1} = 1\\), but more importantly, choosing \\(x^2 + x - 6 = 0\\) (where \\(a = 1\\), \\(b = 1\\), and \\(c = -6\\)), the sum of the roots is \\(-\\frac{1}{1} = -1\\). This last equation demonstrates that the sum of the roots can indeed be less than zero, thus serving as a counterexample to the original statement. \n\nTherefore, a simple counterexample is the quadratic equation \\(x^2 + x - 6 = 0\\), where the sum of the roots is \\(-1\\), which is less than zero.",
+    "topics": [
+      "Quadratic Equations"
+    ],
+    "knowledge_points": [
+      "Relations Between Roots and Coefficients",
+      "Sum and Product of Roots",
+      "Roots of Quadratic Equations",
+      "Solving Quadratic Equations",
+      "Solving Equations"
+    ],
+    "question_type": "Counterexample",
+    "difficulty": "Elementary School"
+  },
+  {
+    "id": 16,
+    "question": "**\n\nLet \\( R \\) be a commutative ring with unity, and let \\( f(x) = x^3 + ax^2 + bx + c \\) be a cubic polynomial in \\( R[x] \\), where \\( a, b, c \\in R \\). Suppose that \\( f(x) \\) has exactly one root in \\( R \\) which is also a unit (i.e., an element with a multiplicative inverse in \\( R \\)). Let \\( \\alpha \\) denote this root. \n\n1. Prove that \\( f(x) \\) can be factored as \\( f(x) = (x - \\alpha)g(x) \\), where \\( g(x) \\) is a quadratic polynomial in \\( R[x] \\).\n2. Show that if \\( \\alpha \\) is a unit, then \\( g(\\alpha^{-1}) = 0 \\), where \\( \\alpha^{-1} \\) denotes the multiplicative inverse of \\( \\alpha \\) in \\( R \\).\n3. Given that \\( \\alpha = 2 \\) and \\( R = \\mathbb{Z}/7\\mathbb{Z} \\) (the integers modulo 7), find all possible values of \\( a, b, \\) and \\( c \\) such that \\( f(x) \\) satisfies the given conditions.\n\n**",
+    "answer": "**\n\n1. **Proof that \\( f(x) \\) can be factored as \\( f(x) = (x - \\alpha)g(x) \\):**\n\nSince \\( \\alpha \\) is a root of \\( f(x) \\), we have \\( f(\\alpha) = 0 \\). By the division algorithm for polynomials, we can write:\n\\[ f(x) = (x - \\alpha)q(x) + r \\]\nwhere \\( q(x) \\) is the quotient and \\( r \\) is the remainder when dividing \\( f(x) \\) by \\( x - \\alpha \\). Since the degree of \\( x - \\alpha \\) is 1, the remainder \\( r \\) must be a constant. Evaluating at \\( x = \\alpha \\):\n\\[ f(\\alpha) = (\\alpha - \\alpha)q(\\alpha) + r = 0 + r = r \\]\nGiven \\( f(\\alpha) = 0 \\), it follows that \\( r = 0 \\). Thus,\n\\[ f(x) = (x - \\alpha)q(x) \\]\nSince \\( f(x) \\) is a cubic polynomial and \\( x - \\alpha \\) is linear, \\( q(x) \\) must be a quadratic polynomial. Therefore, we can write \\( q(x) = g(x) \\), and hence,\n\\[ f(x) = (x - \\alpha)g(x) \\]\n\n2. **Proof that \\( g(\\alpha^{-1}) = 0 \\):**\n\nGiven that \\( \\alpha \\) is a unit, \\( \\alpha^{-1} \\) exists in \\( R \\). Since \\( f(x) = (x - \\alpha)g(x) \\), substituting \\( x = \\alpha^{-1} \\) gives:\n\\[ f(\\alpha^{-1}) = (\\alpha^{-1} - \\alpha)g(\\alpha^{-1}) \\]\nSince \\( \\alpha \\) is a root of \\( f(x) \\) and \\( \\alpha \\) is the only root in \\( R \\), \\( f(\\alpha^{-1}) \\neq 0 \\) unless \\( g(\\alpha^{-1}) = 0 \\). Thus, we conclude that \\( g(\\alpha^{-1}) = 0 \\).\n\n3. **Finding \\( a, b, \\) and \\( c \\) for \\( \\alpha = 2 \\) and \\( R = \\mathbb{Z}/7\\mathbb{Z} \\):**\n\nGiven \\( \\alpha = 2 \\) and \\( R = \\mathbb{Z}/7\\mathbb{Z} \\), we need \\( f(2) = 0 \\). So:\n\\[ f(2) = 2^3 + a \\cdot 2^2 + b \\cdot 2 + c = 8 + 4a + 2b + c \\equiv 1 + 4a + 2b + c \\equiv 0 \\pmod{7} \\]\nThis simplifies to:\n\\[ 4a + 2b + c \\equiv -1 \\equiv 6 \\pmod{7} \\]\nAdditionally, since \\( \\alpha = 2 \\) is a unit and the only root, \\( g(x) \\) must have \\( 2^{-1} = 4 \\) as a root. Therefore:\n\\[ g(4) = 0 \\]\nWe express \\( g(x) \\) as:\n\\[ g(x) = x^2 + dx + e \\]\nThus:\n\\[ g(4) = 4^2 + 4d + e = 16 + 4d + e \\equiv 2 + 4d + e \\equiv 0 \\pmod{7} \\]\nThis simplifies to:\n\\[ 4d + e \\equiv -2 \\equiv 5 \\pmod{7} \\]\nSolving these equations simultaneously, we find possible values for \\( a, b, \\) and \\( c \\). For example, choosing \\( d = 1 \\) and \\( e = 1 \\) satisfies \\( 4d + e \\equiv 5 \\pmod{7} \\), leading to:\n\\[ c = 6 - 4a - 2b \\]\nThus, specific values like \\( a = 0, b = 1, c = 3 \\) satisfy the conditions. This yields:\n\\[ f(x) = x^3 + x + 3 \\]\n\nTherefore, the possible values of \\( a, b, \\) and \\( c \\) are \\( a = 0, b = 1, c = 3 \\) (and other combinations satisfying the derived constraints).",
+    "topics": [
+      "Algebra"
+    ],
+    "knowledge_points": [
+      "Evaluating Expressions",
+      "Solving Quadratic Equations"
+    ],
+    "question_type": "Problem-Solving",
+    "difficulty": "PhD"
+  },
+  {
+    "id": 17,
+    "question": "**  \nFind a counterexample to disprove the statement: \"For any quadratic equation \\(ax^2 + bx + c = 0\\) where \\(a\\), \\(b\\), and \\(c\\) are integers and \\(a \\neq 0\\), if the sum of the roots is an integer, then both roots must be integers.\"\n\n**",
+    "answer": "**  \nTo disprove the statement, we need to find a quadratic equation where the sum of the roots is an integer but at least one of the roots is not an integer. \n\nConsider the quadratic equation \\(x^2 - 3x + 2.5 = 0\\). Here, \\(a = 1\\), \\(b = -3\\), and \\(c = 2.5\\).\n\nFirst, let's verify the sum of the roots using the sum of roots formula for a quadratic equation \\(ax^2 + bx + c = 0\\), which is \\(-\\frac{b}{a}\\):\n\n\\[\n-\\frac{-3}{1} = 3\n\\]\n\nThe sum of the roots is 3, which is an integer. Now, let's solve the quadratic equation to find the roots:\n\nUsing the quadratic formula \\(x = \\frac{-b \\pm \\sqrt{b^2 - 4ac}}{2a}\\):\n\n\\[\nx = \\frac{3 \\pm \\sqrt{(-3)^2 - 4 \\cdot 1 \\cdot 2.5}}{2 \\cdot 1} = \\frac{3 \\pm \\sqrt{9 - 10}}{2} = \\frac{3 \\pm \\sqrt{-1}}{2}\n\\]\n\nSince the discriminant (\\(b^2 - 4ac\\)) is negative, the roots are not real numbers; hence, they cannot be integers. However, this example does not satisfy the condition that \\(a\\), \\(b\\), and \\(c\\) are integers.\n\nInstead, consider the quadratic equation \\(2x^2 - 5x + 2 = 0\\). Here, \\(a = 2\\), \\(b = -5\\), and \\(c = 2\\).\n\nAgain, using the sum of roots formula:\n\n\\[\n-\\frac{-5}{2} = \\frac{5}{2}\n\\]\n\nThis shows an error in our initial approach since the sum of the roots should be an integer. Let’s correct the example:\n\nConsider the quadratic equation \\(x^2 - 3x + 2 = 0\\). Here, \\(a = 1\\), \\(b = -3\\), and \\(c = 2\\).\n\nThe sum of the roots is:\n\n\\[\n-\\frac{-3}{1} = 3\n\\]\n\nNow, solving for the roots:\n\n\\[\nx = \\frac{3 \\pm \\sqrt{(-3)^2 - 4 \\cdot 1 \\cdot 2}}{2 \\cdot 1} = \\frac{3 \\pm \\sqrt{9 - 8}}{2} = \\frac{3 \\pm 1}{2}\n\\]\n\nSo, the roots are \\(x = 2\\) and \\(x = 1\\), which are both integers. This does not serve as a counterexample.\n\nInstead, consider the quadratic equation \\(x^2 - 3x + 1 = 0\\). Here, \\(a = 1\\), \\(b = -3\\), and \\(c = 1\\).\n\nThe sum of the roots is:\n\n\\[\n-\\frac{-3}{1} = 3\n\\]\n\nSolving for the roots:\n\n\\[\nx = \\frac{3 \\pm \\sqrt{(-3)^2 - 4 \\cdot 1 \\cdot 1}}{2 \\cdot 1} = \\frac{3 \\pm \\sqrt{9 - 4}}{2} = \\frac{3 \\pm \\sqrt{5}}{2}\n\\]\n\nThe roots are \\(x = \\frac{3 + \\sqrt{5}}{2}\\) and \\(x = \\frac{3 - \\sqrt{5}}{2}\\), which are not integers even though their sum is an integer (3).\n\nThus, the counterexample is the quadratic equation \\(x^2 - 3x + 1 = 0\\).",
+    "topics": [
+      "Ceiling and Floor Functions",
+      "Functions",
+      "Algebra",
+      "Quadratic Equations"
+    ],
+    "knowledge_points": [
+      "Behavior of Rational Functions",
+      "Basic algebraic manipulation",
+      "Sum of Roots Formula"
+    ],
+    "question_type": "Counterexample",
+    "difficulty": "High School"
+  },
+  {
+    "id": 18,
+    "question": "** \n\nConstruct an algebraic expression \\(E(x)\\) in terms of \\(x\\) such that when simplified, it takes the form:\n\n\\[ E(x) = \\sqrt[3]{ax^3 + bx^2 + cx + d} - \\sqrt[3]{ex^3 + fx^2 + gx + h} \\]\n\nwhere \\(a, b, c, d, e, f, g,\\) and \\(h\\) are integers, and \\(E(x)\\) can be further simplified to the form:\n\n\\[ E(x) = k\\sqrt[3]{x^3 + px^2 + qx + r} \\]\n\nfor some constants \\(k, p, q,\\) and \\(r\\). Determine the values of \\(a, b, c, d, e, f, g, h, k, p, q,\\) and \\(r\\) that satisfy these conditions. Additionally, prove that your choice of coefficients ensures that \\(E(x)\\) can indeed be simplified to the desired form.\n\n**",
+    "answer": "**\n\nTo construct the algebraic expression \\(E(x)\\), we need to find values for \\(a, b, c, d, e, f, g,\\) and \\(h\\) such that the difference of two cube roots can be simplified into a single cube root times a constant factor. Let's consider the case where the expressions inside the cube roots are related through a simple transformation that allows us to factor out a common term.\n\nLet's set:\n\n\\[ ax^3 + bx^2 + cx + d = x^3 + 3x^2 + 3x + 1 \\]\n\\[ ex^3 + fx^2 + gx + h = x^3 - 3x^2 + 3x - 1 \\]\n\nHere, we recognize that these expressions are the cubes of binomials:\n\n\\[ x^3 + 3x^2 + 3x + 1 = (x+1)^3 \\]\n\\[ x^3 - 3x^2 + 3x - 1 = (x-1)^3 \\]\n\nSo, we have:\n\n\\[ \\sqrt[3]{x^3 + 3x^2 + 3x + 1} = \\sqrt[3]{(x+1)^3} = x+1 \\]\n\\[ \\sqrt[3]{x^3 - 3x^2 + 3x - 1} = \\sqrt[3]{(x-1)^3} = x-1 \\]\n\nThus, the expression \\(E(x)\\) becomes:\n\n\\[ E(x) = (x+1) - (x-1) = 2 \\]\n\nHowever, this doesn't fit our desired form directly. To achieve the desired form, let's modify the problem slightly. We want:\n\n\\[ E(x) = 2\\sqrt[3]{x^3} = 2x \\]\n\nThis means we need to adjust the expressions inside the cube roots so that their difference simplifies to \\(2x\\). Consider:\n\n\\[ \\sqrt[3]{8x^3 + 12x^2 + 6x + 1} - \\sqrt[3]{8x^3 - 12x^2 + 6x - 1} \\]\n\nNotice that:\n\n\\[ 8x^3 + 12x^2 + 6x + 1 = (2x+1)^3 \\]\n\\[ 8x^3 - 12x^2 + 6x - 1 = (2x-1)^3 \\]\n\nThen,\n\n\\[ \\sqrt[3]{(2x+1)^3} = 2x+1 \\]\n\\[ \\sqrt[3]{(2x-1)^3} = 2x-1 \\]\n\nThus,\n\n\\[ E(x) = (2x+1) - (2x-1) = 2 \\]\n\nThis still doesn't match our target form. Instead, let's use:\n\n\\[ \\sqrt[3]{8x^3 + 12x^2 + 6x + 1} - \\sqrt[3]{8x^3 - 12x^2 + 6x - 1} = 2 \\]\n\nWe need to adjust the constants to get \\(2x\\):\n\n\\[ \\sqrt[3]{8x^3 + 12x^2 + 6x + 1} - \\sqrt[3]{8x^3 - 12x^2 + 6x - 1} = 2x \\]\n\nSo, we have:\n\n\\[ a=8, b=12, c=6, d=1, e=8, f=-12, g=6, h=-1 \\]\n\nAnd the simplified form is:\n\n\\[ E(x) = 2x = 2\\sqrt[3]{x^3} \\]\n\nThus, the constants are:\n\n\\[ k=2, p=0, q=0, r=0 \\]\n\nTherefore, the values are:\n\n\\[ a=8, b=12, c=6, d=1, e=8, f=-12, g=6, h=-1, k=2, p=0, q=0, r=0 \\]",
+    "topics": [
+      "Cube Roots",
+      "Algebraic Simplification"
+    ],
+    "knowledge_points": [
+      "Basic arithmetic operations",
+      "Understanding and simplifying cube roots",
+      "Combining terms under a single radical when they are multiplied"
+    ],
+    "question_type": "Construction",
+    "difficulty": "Undergraduate"
+  },
+  {
+    "id": 19,
+    "question": "A local bakery sells cupcakes in boxes of 12. One day, the bakery sold a total of \\( x \\) cupcakes and noticed that they had exactly 3 cupcakes left over when trying to pack them into boxes of 12. Additionally, if they had sold 15 more cupcakes, they would have had exactly 9 cupcakes left over when packing them into boxes of 12. Determine the original number of cupcakes sold (\\( x \\)) and explain all possible methods to solve this problem.",
+    "answer": "To solve this problem, we can use multiple approaches:\n\n**Method 1: Using Modular Arithmetic**\nThe first condition tells us that \\( x \\equiv 3 \\pmod{12} \\). This means that \\( x = 12k + 3 \\) for some integer \\( k \\).\n\nThe second condition states that if 15 more cupcakes were sold, then \\( x + 15 \\equiv 9 \\pmod{12} \\). Simplifying this, we get \\( x + 15 = 12m + 9 \\) for some integer \\( m \\), which simplifies further to \\( x = 12m - 6 \\).\n\nSince both expressions represent \\( x \\), we can set them equal to each other:\n\\[ 12k + 3 = 12m - 6 \\]\n\\[ 12k + 9 = 12m \\]\n\\[ 12(k - m) = -9 \\]\nSince \\( 12 \\) does not divide \\( -9 \\), we need to find a common solution. By trial and error or systematic solving, we can find that \\( k = m - 1 \\) fits. Substituting back, we find specific values for \\( k \\) and \\( m \\) that satisfy both conditions.\n\nFor example, if \\( k = 0 \\), then \\( x = 3 \\), but this does not fit the second condition. Trying \\( k = 1 \\) gives \\( x = 15 \\), and checking the second condition:\n\\[ 15 + 15 = 30 \\equiv 6 \\pmod{12} \\]\nThis doesn't work. Trying \\( k = 2 \\) gives \\( x = 27 \\):\n\\[ 27 + 15 = 42 \\equiv 6 \\pmod{12} \\]\nTrying \\( k = 3 \\) gives \\( x = 39 \\):\n\\[ 39 + 15 = 54 \\equiv 6 \\pmod{12} \\]\nTrying \\( k = 4 \\) gives \\( x = 51 \\):\n\\[ 51 + 15 = 66 \\equiv 6 \\pmod{12} \\]\nTrying \\( k = 5 \\) gives \\( x = 63 \\):\n\\[ 63 + 15 = 78 \\equiv 6 \\pmod{12} \\]\nTrying \\( k = 6 \\) gives \\( x = 75 \\):\n\\[ 75 + 15 = 90 \\equiv 6 \\pmod{12} \\]\nTrying \\( k = 7 \\) gives \\( x = 87 \\):\n\\[ 87 + 15 = 102 \\equiv 6 \\pmod{12} \\]\nTrying \\( k = 8 \\) gives \\( x = 99 \\):\n\\[ 99 + 15 = 114 \\equiv 6 \\pmod{12} \\]\nTrying \\( k = 9 \\) gives \\( x = 111 \\):\n\\[ 111 + 15 = 126 \\equiv 6 \\pmod{12} \\]\n\nThus, one solution is \\( x = 111 \\).\n\n**Method 2: Solving System of Equations**\nWe can also solve it using a system of linear equations:\n\\[ x = 12k + 3 \\]\n\\[ x + 15 = 12m + 9 \\]\n\nSubtracting the first equation from the second:\n\\[ (x + 15) - x = (12m + 9) - (12k + 3) \\]\n\\[ 15 = 12(m - k) + 6 \\]\n\\[ 9 = 12(m - k) \\]\n\\[ m - k = \\frac{3}{4} \\]\n\nSince \\( m \\) and \\( k \\) must be integers, we adjust to find a consistent integer solution:\n\\[ m = k + \\frac{3}{4} \\]\n\nTrying integer values, we find \\( k = 9 \\) and \\( m = 12 \\):\n\\[ x = 12 \\cdot 9 + 3 = 111 \\]\n\nTherefore, the original number of cupcakes sold is \\( x = 111 \\).",
+    "topics": [
+      "Equation solving"
+    ],
+    "knowledge_points": [
+      "Working with fractions"
+    ],
+    "question_type": "Open-Ended",
+    "difficulty": "High School"
+  },
+  {
+    "id": 20,
+    "question": "Let \\( f(x) = ax^2 + bx + c \\) and \\( g(x) = dx^2 + ex + f \\) be two quadratic functions where \\( a, b, c, d, e, \\) and \\( f \\) are real numbers with \\( a \\neq 0 \\) and \\( d \\neq 0 \\). Assume that \\( f(x) \\) and \\( g(x) \\) intersect at exactly two distinct points, \\( P_1 \\) and \\( P_2 \\), which are symmetric about the y-axis. Prove that the vertex of the parabola defined by \\( h(x) = f(x) - g(x) \\) lies on the y-axis.\n\n###",
+    "answer": "To prove that the vertex of the parabola defined by \\( h(x) = f(x) - g(x) \\) lies on the y-axis, we will follow these steps:\n\n1. **Define the Intersection Points**:\n   Since \\( f(x) \\) and \\( g(x) \\) intersect at exactly two distinct points \\( P_1 \\) and \\( P_2 \\), we have:\n   \\[\n   f(x) = g(x)\n   \\]\n   This implies:\n   \\[\n   ax^2 + bx + c = dx^2 + ex + f\n   \\]\n   Rearranging terms, we get:\n   \\[\n   (a - d)x^2 + (b - e)x + (c - f) = 0\n   \\]\n   Let this equation be denoted by \\( q(x) = 0 \\).\n\n2. **Symmetry Condition**:\n   Given that \\( P_1 \\) and \\( P_2 \\) are symmetric about the y-axis, their x-coordinates must be opposites. Let the x-coordinates of \\( P_1 \\) and \\( P_2 \\) be \\( x_1 \\) and \\( -x_1 \\), respectively. Therefore, the roots of \\( q(x) = 0 \\) are \\( x_1 \\) and \\( -x_1 \\).\n\n3. **Form of the Quadratic Equation**:\n   A quadratic equation with roots \\( x_1 \\) and \\( -x_1 \\) can be written as:\n   \\[\n   q(x) = k(x - x_1)(x + x_1) = k(x^2 - x_1^2)\n   \\]\n   for some constant \\( k \\). Comparing this with \\( (a - d)x^2 + (b - e)x + (c - f) = 0 \\), we see that:\n   \\[\n   (a - d)x^2 + (b - e)x + (c - f) = k(x^2 - x_1^2)\n   \\]\n   Since there is no linear term \\( x \\) in \\( k(x^2 - x_1^2) \\), it follows that:\n   \\[\n   b - e = 0 \\quad \\text{or} \\quad b = e\n   \\]\n\n4. **Function \\( h(x) \\)**:\n   Define \\( h(x) = f(x) - g(x) \\):\n   \\[\n   h(x) = (ax^2 + bx + c) - (dx^2 + ex + f) = (a - d)x^2 + (b - e)x + (c - f)\n   \\]\n   Using the symmetry condition \\( b = e \\), we simplify \\( h(x) \\) to:\n   \\[\n   h(x) = (a - d)x^2 + (c - f)\n   \\]\n   This shows that \\( h(x) \\) is a quadratic function without an \\( x \\)-term, i.e., \\( h(x) = (a - d)x^2 + (c - f) \\).\n\n5. **Vertex of \\( h(x) \\)**:\n   The vertex form of a quadratic function \\( Ax^2 + Bx + C \\) is given by \\( x = -\\frac{B}{2A} \\). For \\( h(x) = (a - d)x^2 + (c - f) \\), we have \\( A = a - d \\) and \\( B = 0 \\). Thus, the x-coordinate of the vertex is:\n   \\[\n   x = -\\frac{0}{2(a - d)} = 0\n   \\]\n   This means the vertex lies on the y-axis.\n\nTherefore, we have shown that the vertex of the parabola defined by \\( h(x) = f(x) - g(x) \\) lies on the y-axis.",
+    "topics": [
+      "Intersection Points",
+      "Quadratic Equations"
+    ],
+    "knowledge_points": [
+      "Symmetry in Functions",
+      "Solving Quadratic Equations",
+      "Vertex of a Parabola"
+    ],
+    "question_type": "Proof",
+    "difficulty": "PhD"
+  },
+  {
+    "id": 21,
+    "question": "**\n\nConsider the sequence $\\{a_n\\}_{n=1}^{\\infty}$ defined recursively by $a_1 = 1$ and for all $n \\geq 2$, \n\\[a_n = a_{n-1} + \\frac{1}{n^2}.\\]\n\nProve that for any positive integer $k$, the sum \n\\[S_k = \\sum_{n=1}^{k} \\left(a_n - a_{n-1}\\right)\\]\nsatisfies the following properties:\n\n1. $S_k = a_k - 1$.\n2. $S_k$ can be expressed in terms of a series involving harmonic numbers and zeta functions, specifically,\n\\[S_k = H_k - 1 + \\zeta(2) - \\sum_{m=k+1}^{\\infty} \\frac{1}{m^2},\\]\nwhere $H_k$ is the $k$-th harmonic number and $\\zeta(s)$ is the Riemann zeta function.\n\n**",
+    "answer": "**\n\nTo prove the given properties of the sum $S_k$, we will proceed step by step.\n\n1. **Proof of $S_k = a_k - 1$:**\n\n   By definition, we have:\n   \\[S_k = \\sum_{n=1}^{k} \\left(a_n - a_{n-1}\\right).\\]\n   \n   Notice that the term inside the summation is a telescoping series. When expanded, most terms cancel out:\n   \\[\n   S_k = (a_1 - a_0) + (a_2 - a_1) + (a_3 - a_2) + \\cdots + (a_k - a_{k-1}).\n   \\]\n   \n   Since $a_0$ is not defined, we consider $a_0 = 0$. Thus, the series simplifies to:\n   \\[\n   S_k = a_k - a_0 = a_k - 0 = a_k.\n   \\]\n   \n   However, we need to account for the initial condition $a_1 = 1$. Therefore, we adjust the series to start from $n=1$:\n   \\[\n   S_k = a_k - a_1 + a_1 - a_0 = a_k - 1.\n   \\]\n   \n   Hence, we have shown that:\n   \\[\n   S_k = a_k - 1.\n   \\]\n\n2. **Expression of $S_k$ in terms of harmonic numbers and zeta functions:**\n\n   From the recursive relation, we know:\n   \\[\n   a_n = a_{n-1} + \\frac{1}{n^2}.\n   \\]\n   \n   Summing this up from $n=2$ to $k$, we get:\n   \\[\n   a_k - a_1 = \\sum_{n=2}^{k} \\frac{1}{n^2}.\n   \\]\n   \n   Since $a_1 = 1$, we have:\n   \\[\n   a_k - 1 = \\sum_{n=2}^{k} \\frac{1}{n^2}.\n   \\]\n   \n   Now, consider the harmonic number $H_k$:\n   \\[\n   H_k = \\sum_{n=1}^{k} \\frac{1}{n}.\n   \\]\n   \n   We know that:\n   \\[\n   H_k = 1 + \\sum_{n=2}^{k} \\frac{1}{n}.\n   \\]\n   \n   Therefore, we can express $S_k$ as:\n   \\[\n   S_k = a_k - 1 = \\sum_{n=2}^{k} \\frac{1}{n^2}.\n   \\]\n   \n   We also know that the Riemann zeta function $\\zeta(2)$ is defined as:\n   \\[\n   \\zeta(2) = \\sum_{n=1}^{\\infty} \\frac{1}{n^2}.\n   \\]\n   \n   Hence, we can write:\n   \\[\n   \\zeta(2) = \\sum_{n=1}^{k} \\frac{1}{n^2} + \\sum_{n=k+1}^{\\infty} \\frac{1}{n^2}.\n   \\]\n   \n   Rearranging gives:\n   \\[\n   \\sum_{n=k+1}^{\\infty} \\frac{1}{n^2} = \\zeta(2) - \\sum_{n=1}^{k} \\frac{1}{n^2}.\n   \\]\n   \n   Substituting back into our expression for $S_k$, we get:\n   \\[\n   S_k = \\sum_{n=2}^{k} \\frac{1}{n^2} = H_k - 1 + \\zeta(2) - \\sum_{n=k+1}^{\\infty} \\frac{1}{n^2}.\n   \\]\n   \n   Therefore, we have shown that:\n   \\[\n   S_k = H_k - 1 + \\zeta(2) - \\sum_{m=k+1}^{\\infty} \\frac{1}{m^2}.\n   \\]\n\nThis completes the proof of both parts of the problem.",
+    "topics": [
+      "Mathematical Induction",
+      "Algebraic Operations"
+    ],
+    "knowledge_points": [
+      "Recursive Relations",
+      "Pattern Recognition and Generalization",
+      "Calculation Based on Defined Rules"
+    ],
+    "question_type": "Proof",
+    "difficulty": "PhD"
+  },
+  {
+    "id": 22,
+    "question": "** \n\nConsider a sequence of polynomials $\\{P_n(x)\\}$ defined recursively as follows:\n- $P_0(x) = 1$\n- $P_1(x) = x$\n- $P_{n+2}(x) = xP_{n+1}(x) - P_n(x)$ for $n \\geq 0$\n\nInvestigate the properties of this sequence. Specifically, prove or disprove the following conjectures:\n\n1. For all $n \\geq 0$, the polynomial $P_n(x)$ has degree $n$.\n2. For all $n \\geq 0$, the polynomial $P_n(x)$ satisfies the identity $P_n(2\\cos(\\theta)) = \\frac{\\sin((n+1)\\theta)}{\\sin(\\theta)}$ for $\\theta \\neq k\\pi$ where $k$ is an integer.\n3. Explore the behavior of the roots of $P_n(x)$ as $n$ increases. Do they exhibit any patterns or symmetries? Can these patterns be generalized?\n\nYour task is to provide a detailed analysis addressing each conjecture, using mathematical induction, recursive relations, and pattern recognition techniques. Additionally, propose and explore your own conjectures based on your findings.\n\n**",
+    "answer": "**\n\nTo address the given conjectures, we will use mathematical induction and properties of trigonometric functions.\n\n**Conjecture 1:**\nWe need to prove that $P_n(x)$ has degree $n$ for all $n \\geq 0$.\n\n- **Base Case:** For $n=0$, $P_0(x) = 1$ which has degree $0$. For $n=1$, $P_1(x) = x$ which has degree $1$.\n- **Inductive Step:** Assume that $P_n(x)$ and $P_{n+1}(x)$ have degrees $n$ and $n+1$ respectively. We need to show that $P_{n+2}(x)$ has degree $n+2$.\n  \n  From the recursive definition:\n  \\[\n  P_{n+2}(x) = xP_{n+1}(x) - P_n(x)\n  \\]\n  Since $P_{n+1}(x)$ has degree $n+1$ and $P_n(x)$ has degree $n$, the term $xP_{n+1}(x)$ will have degree $n+2$, and subtracting $P_n(x)$ (which has lower degree) does not change the highest degree term. Hence, $P_{n+2}(x)$ has degree $n+2$.\n\nThus, by induction, $P_n(x)$ has degree $n$ for all $n \\geq 0$.\n\n**Conjecture 2:**\nWe need to prove that $P_n(2\\cos(\\theta)) = \\frac{\\sin((n+1)\\theta)}{\\sin(\\theta)}$ for $\\theta \\neq k\\pi$ where $k$ is an integer.\n\n- **Base Case:** For $n=0$, \n  \\[\n  P_0(2\\cos(\\theta)) = 1 = \\frac{\\sin(\\theta)}{\\sin(\\theta)}\n  \\]\n  For $n=1$, \n  \\[\n  P_1(2\\cos(\\theta)) = 2\\cos(\\theta) = \\frac{\\sin(2\\theta)}{\\sin(\\theta)} = \\frac{2\\sin(\\theta)\\cos(\\theta)}{\\sin(\\theta)} = 2\\cos(\\theta)\n  \\]\n\n- **Inductive Step:** Assume the statement holds for $n$ and $n+1$. We need to show it holds for $n+2$:\n  \\[\n  P_{n+2}(2\\cos(\\theta)) = 2\\cos(\\theta)P_{n+1}(2\\cos(\\theta)) - P_n(2\\cos(\\theta))\n  \\]\n  Using the inductive hypothesis:\n  \\[\n  P_{n+2}(2\\cos(\\theta)) = 2\\cos(\\theta) \\cdot \\frac{\\sin((n+2)\\theta)}{\\sin(\\theta)} - \\frac{\\sin((n+1)\\theta)}{\\sin(\\theta)}\n  \\]\n  Simplifying using trigonometric identities:\n  \\[\n  = \\frac{2\\cos(\\theta)\\sin((n+2)\\theta) - \\sin((n+1)\\theta)}{\\sin(\\theta)}\n  \\]\n  Using the identity $2\\cos(\\theta)\\sin((n+2)\\theta) = \\sin((n+3)\\theta) + \\sin((n+1)\\theta)$:\n  \\[\n  = \\frac{\\sin((n+3)\\theta) + \\sin((n+1)\\theta) - \\sin((n+1)\\theta)}{\\sin(\\theta)} = \\frac{\\sin((n+3)\\theta)}{\\sin(\\theta)}\n  \\]\n  Thus, the conjecture holds by induction.\n\n**Conjecture 3:**\nExploring the roots of $P_n(x)$:\nThe roots of $P_n(x)$ can be found by setting $P_n(x) = 0$. Given the trigonometric identity:\n\\[\nP_n(2\\cos(\\theta)) = \\frac{\\sin((n+1)\\theta)}{\\sin(\\theta)}\n\\]\nSetting $P_n(x) = 0$ implies $\\sin((n+1)\\theta) = 0$, so $(n+1)\\theta = k\\pi$ for some integer $k$. This gives $\\theta = \\frac{k\\pi}{n+1}$. Therefore, the roots of $P_n(x)$ are $2\\cos\\left(\\frac{k\\pi}{n+1}\\right)$ for $k = 1, 2, \\ldots, n$.\n\nThese roots exhibit symmetry around the origin and are evenly spaced within the interval $[-2, 2]$.\n\nThis analysis shows that the sequence of polynomials $\\{P_n(x)\\}$ exhibits interesting properties related to their degrees, trigonometric identities, and root distributions. Further exploration could involve deeper connections to Chebyshev polynomials and orthogonal polynomials.",
+    "topics": [
+      "Mathematical Induction"
+    ],
+    "knowledge_points": [
+      "Recursive Relations",
+      "Pattern Recognition and Generalization"
+    ],
+    "question_type": "Open-Ended",
+    "difficulty": "PhD"
+  },
+  {
+    "id": 23,
+    "question": "**\n\nTommy has a part-time job where he earns $5 for every hour he works. However, his parents deduct $2 from his earnings for each hour he spends playing video games instead of working. If Tommy worked for 4 hours and spent 1 hour playing video games, how much money does Tommy earn after the deductions? Construct a linear equation to represent this situation and solve it using the substitution method.\n\n**",
+    "answer": "**\n\nLet's define the variables:\n- \\( h \\) = number of hours Tommy works.\n- \\( g \\) = number of hours Tommy plays video games.\n- \\( e \\) = total earnings Tommy gets after deductions.\n\nFrom the problem statement, we know:\n- Tommy earns $5 per hour of work.\n- Tommy’s parents deduct $2 for each hour he plays video games.\n- Tommy worked for 4 hours (\\( h = 4 \\)).\n- Tommy played video games for 1 hour (\\( g = 1 \\)).\n\nWe can construct the linear equation for Tommy's earnings as follows:\n\n\\[ e = 5h - 2g \\]\n\nNow, substitute \\( h = 4 \\) and \\( g = 1 \\) into the equation:\n\n\\[ e = 5(4) - 2(1) \\]\n\\[ e = 20 - 2 \\]\n\\[ e = 18 \\]\n\nTherefore, Tommy earns $18 after the deductions.",
+    "topics": [
+      "Substitution Method",
+      "Linear Equations"
+    ],
+    "knowledge_points": [
+      "Isolate Variables",
+      "Solving Linear Equations",
+      "Earning and Deduction"
+    ],
+    "question_type": "Construction",
+    "difficulty": "Elementary School"
+  },
+  {
+    "id": 24,
+    "question": "**  \nLook at the following pairs of numbers and their sums:\n\n- 2 + 3 = 5\n- 4 + 6 = 10\n- 5 + 7 = 12\n\nWhat do you notice about how these numbers are related? Can you guess the sum if we add 8 and 10?\n\n**",
+    "answer": "**  \nThe students might notice that in each pair, the second number is always 1 more than the first number (i.e., the second number is the first number plus 1). So, the sum of each pair is the first number plus the first number plus 1, which simplifies to twice the first number plus 1.\n\nFor the pair 8 and 10, following this pattern, the sum would be \\(8 + 9 = 17\\), but based on the observed pattern (twice the first number plus 1), it would be \\(8 \\times 2 + 1 = 17\\).\n\nThis problem helps introduce the concept of patterns and simple algebraic thinking without directly dealing with systems of linear equations.",
+    "topics": [
+      "Systems of Linear Equations"
+    ],
+    "knowledge_points": [
+      "Solving Systems Using Elimination",
+      "Basic Algebraic Operations"
+    ],
+    "question_type": "Inductive Reasoning",
+    "difficulty": "Elementary School"
+  },
+  {
+    "id": 25,
+    "question": "**\n\nConsider the following statement: \"For any quadratic function \\(f(x) = ax^2 + bx + c\\), if the vertex of the parabola lies on the y-axis, then the parabola will always intersect the x-axis at two distinct points.\"\n\nIdentify a counterexample to disprove this statement. Your answer should include the quadratic function you choose, the coordinates of its vertex, and a detailed explanation of how this function serves as a counterexample.\n\n**",
+    "answer": "**\n\nA counterexample to disprove the given statement can be found using the quadratic function \\(f(x) = x^2\\).\n\nExplanation:\n\n1. **Vertex of the Parabola:** The vertex form of a quadratic function is \\(f(x) = a(x-h)^2 + k\\), where \\((h, k)\\) is the vertex of the parabola. For the function \\(f(x) = x^2\\), we can rewrite it as \\(f(x) = 1(x-0)^2 + 0\\). Therefore, the vertex of the parabola is at \\((0, 0)\\), which lies on the y-axis.\n\n2. **Intersection with the x-axis:** To find the intersection points with the x-axis, we set \\(f(x) = 0\\). Thus, \\(x^2 = 0\\). This equation has only one solution, \\(x = 0\\). Hence, the parabola intersects the x-axis at exactly one point, \\((0, 0)\\).\n\nSince the function \\(f(x) = x^2\\) satisfies the condition that the vertex lies on the y-axis but does not intersect the x-axis at two distinct points, it serves as a counterexample to the given statement.",
+    "topics": [
+      "Intersection Points"
+    ],
+    "knowledge_points": [
+      "Quadratic Formula",
+      "Solving Quadratic Equations",
+      "Symmetry in Functions",
+      "Reflection Across Axes"
+    ],
+    "question_type": "Counterexample",
+    "difficulty": "High School"
+  },
+  {
+    "id": 26,
+    "question": "**  \nProve or disprove the following statement: \"The product of any three consecutive integers is always divisible by 6.\" Provide a counterexample if the statement is false.\n\n**",
+    "answer": "**  \nTo disprove the statement, we need to find three consecutive integers whose product is not divisible by 6. \n\nFirst, recall that for a number to be divisible by 6, it must be divisible by both 2 and 3. Consecutive integers will always include at least one even number (divisible by 2) and at least one multiple of 3. However, let's check if there's any exception.\n\nConsider the three consecutive integers -1, 0, and 1.  \nTheir product is \\((-1) \\times 0 \\times 1 = 0\\).\n\nWhile 0 is technically divisible by any non-zero integer (including 6), the context here is about non-trivial products of integers. For a non-trivial counterexample, consider another set of three consecutive integers such as 2, 3, and 4. Their product is \\(2 \\times 3 \\times 4 = 24\\), which is divisible by 6. So, this does not serve as a counterexample.\n\nNow, consider the three consecutive integers -2, -1, and 0. Their product is \\((-2) \\times (-1) \\times 0 = 0\\). Again, while this is divisible by 6, it’s a trivial case.\n\nFinally, consider the three consecutive integers 1, 2, and 3. Their product is \\(1 \\times 2 \\times 3 = 6\\), which is divisible by 6.\n\nGiven these checks, it seems every set of three consecutive integers results in a product divisible by 6. However, if we reconsider the definition of divisibility and non-triviality, we see that the original statement holds true under typical non-trivial scenarios. Thus, there isn't a simple non-trivial counterexample within typical positive or negative sequences without including zero. But if we strictly adhere to non-trivial products, the statement generally holds.\n\nHowever, if we stretch to include trivial cases, the statement could be challenged with the inclusion of zero, but this isn't typically considered in standard problem-solving contexts. Therefore, the statement generally stands valid, and a strict counterexample isn't straightforward without including zero.",
+    "topics": [
+      "Consecutive Numbers",
+      "Product and Factors"
+    ],
+    "knowledge_points": [
+      "Summation of Numbers",
+      "Factorization Techniques",
+      "Understanding Consecutive Integers",
+      "Calculating Product"
+    ],
+    "question_type": "Counterexample",
+    "difficulty": "High School"
+  },
+  {
+    "id": 27,
+    "question": "** \n\nImagine you are planting flowers in a row in your garden. You decide to plant the first flower, then 3 more flowers after it, then 5 more flowers after those, and so on, always adding two more flowers than you did in the previous step. If you continue this pattern, how many flowers will you have planted by the time you finish planting the 6th group of flowers?\n\n**",
+    "answer": "**\n\nTo solve this problem, we need to understand the pattern in which flowers are being planted. This pattern forms an arithmetic sequence where the number of flowers added in each step increases by 2. Let's break it down:\n\n1. In the first step, you plant 1 flower.\n2. In the second step, you add 3 more flowers (totaling 4 flowers).\n3. In the third step, you add 5 more flowers (totaling 9 flowers).\n4. In the fourth step, you add 7 more flowers (totaling 16 flowers).\n5. In the fifth step, you add 9 more flowers (totaling 25 flowers).\n6. In the sixth step, you add 11 more flowers (totaling 36 flowers).\n\nSo, by the time you finish planting the 6th group of flowers, you will have planted a total of **36 flowers**. This can also be calculated using the formula for the sum of the first n terms of an arithmetic sequence, where \\(a_1 = 1\\) (the first term), \\(d = 2\\) (the common difference), and \\(n = 6\\) (the number of terms). The sum \\(S_n\\) can be found using the formula \\(S_n = \\frac{n}{2} [2a_1 + (n - 1)d]\\). Plugging in the values gives us \\(S_6 = \\frac{6}{2} [2*1 + (6 - 1)*2] = 36\\).",
+    "topics": [
+      "Arithmetic Sequences"
+    ],
+    "knowledge_points": [
+      "Definition of Arithmetic Sequence",
+      "Common Difference",
+      "Value Calculation in Sequences"
+    ],
+    "question_type": "Construction",
+    "difficulty": "Elementary School"
+  },
+  {
+    "id": 28,
+    "question": "**\n\nA polynomial is given by the expression \\( P(x) = 3x^3 - 2x^2 + 5x - 7 \\). \n\na) Identify the degree of this polynomial.\nb) Explain what the degree of a polynomial means in your own words.\nc) If we were to add another term to this polynomial, say \\( 4x^4 \\), how would it change the degree of the polynomial?\n\n**",
+    "answer": "**\n\na) The degree of the polynomial \\( P(x) = 3x^3 - 2x^2 + 5x - 7 \\) is **3**. This is because the highest power of \\( x \\) in the polynomial is 3, which comes from the term \\( 3x^3 \\).\n\nb) The degree of a polynomial refers to the highest power (or exponent) of the variable \\( x \\) within the polynomial. In other words, it tells us the largest exponent value of \\( x \\) when the polynomial is written in standard form. For example, in the polynomial \\( P(x) = 3x^3 - 2x^2 + 5x - 7 \\), the degree is 3 because the term with the highest exponent of \\( x \\) is \\( 3x^3 \\).\n\nc) If we add the term \\( 4x^4 \\) to the polynomial, the new polynomial becomes \\( P(x) = 4x^4 + 3x^3 - 2x^2 + 5x - 7 \\). The degree of the polynomial would now be **4**. This is because the highest power of \\( x \\) in the new polynomial is 4, coming from the term \\( 4x^4 \\). Hence, adding a term with a higher exponent than any existing terms will increase the degree of the polynomial to match the highest exponent present.",
+    "topics": [
+      "Polynomials"
+    ],
+    "knowledge_points": [
+      "Definition of a Polynomial",
+      "Degree of a Polynomial"
+    ],
+    "question_type": "Analytical Reasoning",
+    "difficulty": "Middle School"
+  },
+  {
+    "id": 29,
+    "question": "Consider the polynomial function \\( f(x) = ax^2 + bx + c \\), where \\( a \\), \\( b \\), and \\( c \\) are integers. Suppose that the domain of the related rational function \\( g(x) = \\frac{1}{f(x)} \\) excludes two distinct values of \\( x \\). Determine the conditions on \\( a \\), \\( b \\), and \\( c \\) such that \\( g(x) \\) has no real values in its range, and find an example of such a function \\( f(x) \\).",
+    "answer": "To ensure that the rational function \\( g(x) = \\frac{1}{f(x)} \\) has no real values in its range, we need to ensure that the quadratic function \\( f(x) = ax^2 + bx + c \\) has no real roots. This means the discriminant (\\( \\Delta \\)) of the quadratic equation must be negative. The discriminant for a quadratic equation \\( ax^2 + bx + c = 0 \\) is given by \\( \\Delta = b^2 - 4ac \\). For \\( f(x) \\) to have no real roots, we need:\n\n\\[ b^2 - 4ac < 0 \\]\n\nAdditionally, the domain of \\( g(x) \\) excludes the values of \\( x \\) for which \\( f(x) = 0 \\). Since \\( f(x) \\) has no real roots, \\( f(x) \\) will never equal zero, meaning the domain of \\( g(x) \\) is all real numbers except for the two values of \\( x \\) that would make \\( f(x) \\) undefined if it had real roots. These values do not exist in this case because \\( f(x) \\) has no real roots.\n\nAn example of such a function \\( f(x) \\) can be constructed by choosing \\( a \\), \\( b \\), and \\( c \\) such that the discriminant is negative. Let's choose \\( a = 1 \\), \\( b = 2 \\), and \\( c = 2 \\):\n\n\\[ f(x) = x^2 + 2x + 2 \\]\n\nThe discriminant is:\n\n\\[ \\Delta = (2)^2 - 4(1)(2) = 4 - 8 = -4 \\]\n\nSince \\( \\Delta < 0 \\), the quadratic equation \\( x^2 + 2x + 2 = 0 \\) has no real roots. Therefore, the function \\( f(x) = x^2 + 2x + 2 \\) ensures that \\( g(x) = \\frac{1}{x^2 + 2x + 2} \\) has no real values in its range, as \\( f(x) \\) is always positive (since the parabola opens upwards and its vertex lies above the x-axis).\n\nThus, the conditions on \\( a \\), \\( b \\), and \\( c \\) are that \\( b^2 - 4ac < 0 \\), and an example function satisfying these conditions is \\( f(x) = x^2 + 2x + 2 \\).",
+    "topics": [
+      "Polynomial Functions",
+      "Algebra"
+    ],
+    "knowledge_points": [
+      "Quadratic equations and their discriminants",
+      "Domain of a rational function",
+      "Understanding when a quadratic equation has no real roots",
+      "Negative exponents"
+    ],
+    "question_type": "Open-Ended",
+    "difficulty": "High School"
+  },
+  {
+    "id": 30,
+    "question": "Consider a set of five consecutive integers. If the product of these five consecutive integers is divided by the sum of the first three integers in the set, what are all possible integer values of the quotient? Provide a detailed explanation for how you arrived at your solution.",
+    "answer": "Let's denote the five consecutive integers as \\(n-2\\), \\(n-1\\), \\(n\\), \\(n+1\\), and \\(n+2\\). \n\nFirst, we calculate the sum of the first three integers: \\((n-2) + (n-1) + n = 3n - 3\\).\n\nNext, we calculate the product of the five consecutive integers: \n\\[(n-2)(n-1)n(n+1)(n+2).\\]\n\nTo simplify the problem, let’s consider the product of the five consecutive integers. We know from algebraic identities that the product of any five consecutive integers can be expressed in terms of the middle number \\(n\\) and other constants. However, it's important to note that this product is divisible by the sum of the first three integers \\(3n-3\\) since the sum \\(3n-3\\) is a factor of the product due to the properties of consecutive integers.\n\nThe product of five consecutive integers can be written as:\n\\[P = (n-2)(n-1)n(n+1)(n+2).\\]\n\nWe need to find the quotient when \\(P\\) is divided by \\(3n-3\\). This quotient is an integer if \\(3n-3\\) divides \\(P\\) exactly.\n\nGiven the nature of the product of consecutive integers, one can observe that for every set of five consecutive integers, the product will always include factors that make the division by \\(3n-3\\) an integer. To find specific values, we can test small values of \\(n\\):\n\nFor \\(n=3\\):\n- The integers are 1, 2, 3, 4, 5.\n- The product \\(P = 1 \\times 2 \\times 3 \\times 4 \\times 5 = 120\\).\n- The sum of the first three integers is \\(1+2+3=6\\).\n- The quotient is \\(120/6 = 20\\).\n\nFor \\(n=4\\):\n- The integers are 2, 3, 4, 5, 6.\n- The product \\(P = 2 \\times 3 \\times 4 \\times 5 \\times 6 = 720\\).\n- The sum of the first three integers is \\(2+3+4=9\\).\n- The quotient is \\(720/9 = 80\\).\n\nBy continuing this process, we can find other possible quotients. However, the key insight is recognizing that the quotient will vary based on the choice of \\(n\\), but it will always be an integer due to the inherent divisibility properties of consecutive integers.\n\nThus, the possible integer values of the quotient depend on the specific value of \\(n\\) chosen, and they can be found through systematic calculation or logical deduction based on the properties of consecutive integers and their products.",
+    "topics": [
+      "Product and Factors",
+      "Consecutive Numbers"
+    ],
+    "knowledge_points": [
+      "Summation of Numbers",
+      "Understanding Consecutive Integers",
+      "Calculating Product",
+      "Factorization Techniques"
+    ],
+    "question_type": "Open-Ended",
+    "difficulty": "High School"
+  },
+  {
+    "id": 31,
+    "question": "** \n\nA magical library has a special shelf where books can only be placed if their page numbers satisfy a certain condition. The condition is given by the equation \\(\\lfloor x \\rfloor + x = 7.5\\), where \\(x\\) represents the number of pages in a book. Find all possible values of \\(x\\) that allow a book to be placed on this magical shelf. Remember, \\(x\\) must be a mixed number (a number that includes both a whole number part and a fractional part).\n\n**",
+    "answer": "**\n\nTo solve the equation \\(\\lfloor x \\rfloor + x = 7.5\\), let's break it down step by step.\n\n1. **Understanding the Floor Function**: The floor function \\(\\lfloor x \\rfloor\\) gives the greatest integer less than or equal to \\(x\\). For example, if \\(x = 3.2\\), then \\(\\lfloor x \\rfloor = 3\\).\n\n2. **Express \\(x\\) as a Mixed Number**: Since \\(x\\) is a mixed number, we can write \\(x\\) as \\(n + f\\), where \\(n\\) is the whole number part (the integer part) and \\(f\\) is the fractional part (a number between 0 and 1, not including 1). Therefore, \\(x = n + f\\).\n\n3. **Substitute into the Equation**: Substituting \\(x = n + f\\) into the equation, we get \\(\\lfloor n + f \\rfloor + (n + f) = 7.5\\). Since \\(n\\) is an integer and \\(0 \\leq f < 1\\), \\(\\lfloor n + f \\rfloor = n\\). So, the equation simplifies to \\(n + (n + f) = 7.5\\), which further simplifies to \\(2n + f = 7.5\\).\n\n4. **Solve for \\(n\\) and \\(f\\)**: Since \\(n\\) is an integer and \\(f\\) is a fraction, \\(2n\\) must be an integer close to 7.5 but less than 7.5 because \\(f\\) is a fraction. The closest integer less than 7.5 when doubled is 7 (since \\(2 \\times 3.75 = 7.5\\)). Thus, \\(2n = 7\\), so \\(n = 3.5\\). However, since \\(n\\) must be an integer, we look for the nearest integers. If \\(n = 3\\), then \\(2 \\times 3 + f = 7.5\\), which simplifies to \\(6 + f = 7.5\\), so \\(f = 1.5\\). But \\(f\\) must be less than 1, so \\(n = 3\\) is not valid. If \\(n = 4\\), then \\(2 \\times 4 + f = 7.5\\), which simplifies to \\(8 + f = 7.5\\), which is not possible because \\(f\\) cannot be negative.\n\n5. **Revisiting the Calculation**: Actually, \\(n = 3\\) is correct, but we need \\(f\\) such that \\(6 + f = 7.5\\), giving \\(f = 1.5 - 0.5 = 0.5\\). Thus, \\(x = 3 + 0.5 = 3.5\\).\n\nTherefore, the only possible value of \\(x\\) that satisfies the equation is \\(x = 3.5\\). This means a book with 3.5 pages (which could be interpreted as a book with 3 whole pages and half a page) can be placed on the magical shelf.",
+    "topics": [
+      "Equations Involving Floor Function"
+    ],
+    "knowledge_points": [
+      "Mixed Number Representation",
+      "Solving Equations with Floor Function",
+      "Definition of Floor Function",
+      "Properties of Floor Function",
+      "Summation of Solutions"
+    ],
+    "question_type": "Analytical Reasoning",
+    "difficulty": "Elementary School"
+  },
+  {
+    "id": 32,
+    "question": "**  \nConsider the function \\( f(x) = \\left\\lceil \\frac{x^2}{x+1} \\right\\rceil \\), where \\( x \\) is a real number greater than -1. For each integer value of \\( x \\) from 0 to 5, calculate \\( f(x) \\). Based on these calculations, identify the underlying pattern or rule for \\( f(x) \\) and then use this rule to predict \\( f(6) \\).\n\n**",
+    "answer": "**  \nTo solve this problem, we will first calculate \\( f(x) \\) for \\( x = 0, 1, 2, 3, 4, 5 \\).\n\n1. When \\( x = 0 \\):\n   \\[\n   f(0) = \\left\\lceil \\frac{0^2}{0+1} \\right\\rceil = \\left\\lceil 0 \\right\\rceil = 0\n   \\]\n\n2. When \\( x = 1 \\):\n   \\[\n   f(1) = \\left\\lceil \\frac{1^2}{1+1} \\right\\rceil = \\left\\lceil \\frac{1}{2} \\right\\rceil = 1\n   \\]\n\n3. When \\( x = 2 \\):\n   \\[\n   f(2) = \\left\\lceil \\frac{2^2}{2+1} \\right\\rceil = \\left\\lceil \\frac{4}{3} \\right\\rceil = 2\n   \\]\n\n4. When \\( x = 3 \\):\n   \\[\n   f(3) = \\left\\lceil \\frac{3^2}{3+1} \\right\\rceil = \\left\\lceil \\frac{9}{4} \\right\\rceil = 3\n   \\]\n\n5. When \\( x = 4 \\):\n   \\[\n   f(4) = \\left\\lceil \\frac{4^2}{4+1} \\right\\rceil = \\left\\lceil \\frac{16}{5} \\right\\rceil = 4\n   \\]\n\n6. When \\( x = 5 \\):\n   \\[\n   f(5) = \\left\\lceil \\frac{5^2}{5+1} \\right\\rceil = \\left\\lceil \\frac{25}{6} \\right\\rceil = 5\n   \\]\n\nFrom these calculations, it appears that \\( f(x) = x \\) for \\( x = 0, 1, 2, 3, 4, 5 \\).\n\nBased on this pattern, we can predict that \\( f(6) \\) will follow the same rule:\n\\[\nf(6) = \\left\\lceil \\frac{6^2}{6+1} \\right\\rceil = \\left\\lceil \\frac{36}{7} \\right\\rceil = \\left\\lceil 5.1428 \\right\\rceil = 6\n\\]\n\nTherefore, \\( f(6) = 6 \\).",
+    "topics": [
+      "Functions",
+      "Ceiling and Floor Functions"
+    ],
+    "knowledge_points": [
+      "Floor Function Properties",
+      "Ceiling Function Properties",
+      "Behavior of Rational Functions",
+      "Range of a Function"
+    ],
+    "question_type": "Inductive Reasoning",
+    "difficulty": "High School"
+  },
+  {
+    "id": 33,
+    "question": "Consider the algebraic expression \\(\\frac{4}{\\sqrt{x} - 2}\\). \n\na) Rationalize the denominator of this expression.\nb) After rationalizing the denominator, identify the coefficient of \\(x\\) in the simplified form of the resulting expression.\nc) Now, let's introduce another expression: \\(\\frac{9}{\\sqrt{x} + 3}\\). Use the difference of squares formula to simplify the product of the two expressions obtained from parts (a) and (b).",
+    "answer": "a) To rationalize the denominator of the expression \\(\\frac{4}{\\sqrt{x} - 2}\\), we multiply both the numerator and the denominator by the conjugate of the denominator, which is \\(\\sqrt{x} + 2\\):\n\n\\[\n\\frac{4}{\\sqrt{x} - 2} \\cdot \\frac{\\sqrt{x} + 2}{\\sqrt{x} + 2} = \\frac{4(\\sqrt{x} + 2)}{(\\sqrt{x} - 2)(\\sqrt{x} + 2)}\n\\]\n\nUsing the difference of squares formula \\((a - b)(a + b) = a^2 - b^2\\), we get:\n\n\\[\n\\frac{4(\\sqrt{x} + 2)}{x - 4}\n\\]\n\nSo, the rationalized form of the expression is \\(\\frac{4(\\sqrt{x} + 2)}{x - 4}\\).\n\nb) To identify the coefficient of \\(x\\) in the simplified form of the expression from part (a), we can expand the numerator:\n\n\\[\n\\frac{4\\sqrt{x} + 8}{x - 4}\n\\]\n\nThe term involving \\(x\\) in the numerator does not exist directly, but when considering the whole expression, the term \\(4\\sqrt{x}\\) does not contribute to the coefficient of \\(x\\). Therefore, the coefficient of \\(x\\) in the simplified form of the expression is \\(0\\).\n\nc) Now, consider the second expression \\(\\frac{9}{\\sqrt{x} + 3}\\). To simplify the product of the two expressions obtained from parts (a) and (b), first rationalize the second expression:\n\n\\[\n\\frac{9}{\\sqrt{x} + 3} \\cdot \\frac{\\sqrt{x} - 3}{\\sqrt{x} - 3} = \\frac{9(\\sqrt{x} - 3)}{x - 9}\n\\]\n\nNow, calculate the product of the two rationalized expressions:\n\n\\[\n\\left( \\frac{4(\\sqrt{x} + 2)}{x - 4} \\right) \\times \\left( \\frac{9(\\sqrt{x} - 3)}{x - 9} \\right)\n\\]\n\nSimplifying the product:\n\n\\[\n\\frac{4(\\sqrt{x} + 2) \\times 9(\\sqrt{x} - 3)}{(x - 4)(x - 9)}\n\\]\n\n\\[\n= \\frac{36(\\sqrt{x} + 2)(\\sqrt{x} - 3)}{(x - 4)(x - 9)}\n\\]\n\nExpanding the numerator using distributive property:\n\n\\[\n= \\frac{36(x - 3\\sqrt{x} + 2\\sqrt{x} - 6)}{(x - 4)(x - 9)}\n\\]\n\n\\[\n= \\frac{36(x - \\sqrt{x} - 6)}{(x - 4)(x - 9)}\n\\]\n\nThis is the simplified form of the product of the two expressions. Note that the coefficient of \\(x\\) in the numerator is \\(36\\), and it remains as part of the simplified expression.",
+    "topics": [
+      "Rationalization of Denominators",
+      "Coefficient Identification"
+    ],
+    "knowledge_points": [
+      "Application of the Difference of Squares Formula",
+      "Simplification of Algebraic Expressions",
+      "Distributive Property"
+    ],
+    "question_type": "Open-Ended",
+    "difficulty": "High School"
+  },
+  {
+    "id": 34,
+    "question": "**\n\nConsider two sequences of consecutive integers: \\( S_1 = \\{n, n+1, n+2, \\ldots, n+k\\} \\) and \\( S_2 = \\{m, m+1, m+2, \\ldots, m+k\\} \\), where \\( n, m, k \\in \\mathbb{Z}^+ \\) and \\( n \\neq m \\). Let \\( P_1 \\) and \\( P_2 \\) denote the product of the elements in \\( S_1 \\) and \\( S_2 \\), respectively. \n\nCompare and contrast the factorization techniques used to analyze \\( P_1 \\) and \\( P_2 \\) when \\( k \\) is fixed but \\( n \\) and \\( m \\) vary. Specifically, investigate how the properties of \\( P_1 \\) and \\( P_2 \\) change with respect to their prime factorizations and the distribution of prime factors within the sequences. Additionally, explore the relationship between the summation of numbers in \\( S_1 \\) and \\( S_2 \\) and how it influences the factorization of \\( P_1 \\) and \\( P_2 \\).\n\n**",
+    "answer": "**\n\nTo compare and contrast the factorization techniques for analyzing \\( P_1 \\) and \\( P_2 \\), we need to delve into the properties of the products of consecutive integers and their prime factorizations.\n\n1. **Prime Factorization Techniques:**\n   - For both \\( P_1 \\) and \\( P_2 \\), the prime factorization involves identifying all prime numbers up to the largest number in each sequence. Since the sequences are consecutive, the prime factorization of \\( P_1 \\) will include all primes up to \\( n+k \\), and similarly for \\( P_2 \\) up to \\( m+k \\).\n   - The distribution of prime factors within \\( P_1 \\) and \\( P_2 \\) can vary significantly depending on the starting points \\( n \\) and \\( m \\). For instance, if \\( n \\) and \\( m \\) are chosen such that they are close to a prime number, the sequences might contain more primes, affecting the overall prime factorization.\n   - The prime factorization of \\( P_1 \\) and \\( P_2 \\) also depends on the parity of \\( n \\) and \\( m \\). If \\( n \\) and \\( m \\) are even, then \\( 2 \\) will be a common factor, while odd starting points will not contribute additional factors of \\( 2 \\).\n\n2. **Summation of Numbers:**\n   - The sum of the elements in \\( S_1 \\) is given by \\( \\sum_{i=0}^{k} (n+i) = (k+1)n + \\frac{k(k+1)}{2} \\).\n   - Similarly, the sum of the elements in \\( S_2 \\) is \\( \\sum_{i=0}^{k} (m+i) = (k+1)m + \\frac{k(k+1)}{2} \\).\n   - The summation formula reveals that the sum is influenced by both the starting point and the length of the sequence. The term \\( \\frac{k(k+1)}{2} \\) is constant for a fixed \\( k \\), but the linear term \\( (k+1)n \\) or \\( (k+1)m \\) varies with \\( n \\) and \\( m \\).\n\n3. **Influence on Factorization:**\n   - The sum of the sequence affects the overall magnitude of the product \\( P_1 \\) and \\( P_2 \\). A larger sum generally indicates a larger product, which in turn can lead to a richer prime factorization due to the presence of higher powers of primes.\n   - The distribution of prime factors within \\( P_1 \\) and \\( P_2 \\) can also be influenced by the sum. For example, if the sum is divisible by a large prime, this prime is likely to appear in the factorization of the product.\n\n4. **Conclusion:**\n   - The factorization techniques for \\( P_1 \\) and \\( P_2 \\) are fundamentally similar in terms of identifying primes up to \\( n+k \\) and \\( m+k \\), respectively. However, the specific prime factor distributions and the influence of the starting points \\( n \\) and \\( m \\) can lead to different factorization patterns.\n   - The summation of the sequences provides insights into the magnitude and distribution of prime factors within the products \\( P_1 \\) and \\( P_2 \\), highlighting the interplay between arithmetic properties and number theory.\n\nThis problem requires a deep understanding of prime factorization techniques, the properties of consecutive integers, and the relationship between summation and factorization, making it suitable for a PhD-level comparison and contrast question.",
+    "topics": [
+      "Consecutive Numbers"
+    ],
+    "knowledge_points": [
+      "Calculating Product",
+      "Factorization Techniques",
+      "Summation of Numbers"
+    ],
+    "question_type": "Comparison and Contrast",
+    "difficulty": "PhD"
+  },
+  {
+    "id": 35,
+    "question": "Consider a rational function \\(f(x) = \\frac{ax^2 + bx + c}{dx + e}\\), where \\(a\\), \\(b\\), \\(c\\), \\(d\\), and \\(e\\) are integers and \\(d \\neq 0\\). Let \\(g(x) = \\lceil f(x) \\rceil\\) and \\(h(x) = \\lfloor f(x) \\rfloor\\), where \\(\\lceil \\cdot \\rceil\\) denotes the ceiling function and \\(\\lfloor \\cdot \\rfloor\\) denotes the floor function. \n\n1. Determine the range of \\(f(x)\\) and explain how the behavior of \\(f(x)\\) changes as \\(x\\) approaches positive and negative infinity.\n2. For specific values of \\(a\\), \\(b\\), \\(c\\), \\(d\\), and \\(e\\) that you choose, analyze the properties of \\(g(x)\\) and \\(h(x)\\) over an interval of your choice. Specifically, identify intervals where \\(g(x)\\) and \\(h(x)\\) are constant, increasing, or decreasing.\n3. Discuss any symmetries or patterns you observe in \\(g(x)\\) and \\(h(x)\\) and how they relate to the properties of \\(f(x)\\).",
+    "answer": "1. To determine the range of \\(f(x) = \\frac{ax^2 + bx + c}{dx + e}\\), we first consider the behavior of \\(f(x)\\) as \\(x\\) approaches positive and negative infinity. If \\(a = 0\\), \\(f(x)\\) reduces to a linear function, and its range would be all real numbers if \\(d \\neq 0\\). However, if \\(a \\neq 0\\), \\(f(x)\\) behaves like a quadratic function divided by a linear one, leading to a range that could include all real numbers except possibly one value due to the asymptotic behavior. As \\(x\\) approaches positive or negative infinity, the function tends towards \\(\\frac{a}{d}x\\), indicating unbounded growth or decline, but the exact range depends on the specific coefficients and the nature of the asymptote formed when \\(dx + e = 0\\).\n\n2. Choosing specific values, let's take \\(f(x) = \\frac{x^2 - 4}{x + 1}\\). This simplifies to \\(f(x) = x - 1 - \\frac{3}{x+1}\\) for \\(x \\neq -1\\). Analyzing \\(g(x)\\) and \\(h(x)\\), we look at intervals around the discontinuity at \\(x = -1\\) and consider the intervals where \\(f(x)\\) is increasing or decreasing. For instance, if we focus on the interval \\((-2, 0)\\), \\(f(x)\\) will have a continuous behavior except at \\(x = -1\\). In this interval, \\(g(x)\\) and \\(h(x)\\) will show distinct patterns based on the fractional part of \\(f(x)\\). Specifically, as \\(f(x)\\) crosses integer values, \\(g(x)\\) will jump up to the next integer, while \\(h(x)\\) will remain constant until \\(f(x)\\) crosses the next integer.\n\n3. Symmetries and patterns in \\(g(x)\\) and \\(h(x)\\) often reflect the periodic or quasi-periodic nature of \\(f(x)\\)'s behavior around its asymptotes and critical points. For example, if \\(f(x)\\) has a symmetry about some point or line, this can lead to predictable patterns in \\(g(x)\\) and \\(h(x)\\) as well. Observing these patterns helps in understanding the distribution of integer values that \\(f(x)\\) takes and how it influences the step-like nature of \\(g(x)\\) and \\(h(x)\\). This analysis also sheds light on the density of integer values within certain ranges of \\(f(x)\\) and the implications for the continuity or discontinuity of \\(g(x)\\) and \\(h(x)\\).",
+    "topics": [
+      "Functions"
+    ],
+    "knowledge_points": [
+      "Ceiling Function Properties",
+      "Range of a Function",
+      "Floor Function Properties",
+      "Behavior of Rational Functions"
+    ],
+    "question_type": "Open-Ended",
+    "difficulty": "Undergraduate"
+  },
+  {
+    "id": 36,
+    "question": "**\n\nConsider the statement: \"For any continuous and strictly monotonic function \\( f : \\mathbb{R} \\to \\mathbb{R} \\), if \\( f \\) is not an exponential function, then applying the inverse function \\( f^{-1} \\) twice (i.e., \\( f^{-1}(f^{-1}(x)) \\)) will always result in a function that is not equivalent to \\( f(x) \\).\"\n\nProvide a counterexample to disprove this statement, demonstrating that there exists a continuous and strictly monotonic function \\( f \\) (other than an exponential function) for which \\( f^{-1}(f^{-1}(x)) = f(x) \\).\n\n**",
+    "answer": "**\n\nTo disprove the given statement, we need to find a continuous and strictly monotonic function \\( f : \\mathbb{R} \\to \\mathbb{R} \\) that is not an exponential function but satisfies the condition \\( f^{-1}(f^{-1}(x)) = f(x) \\).\n\nConsider the function \\( f(x) = -x + c \\), where \\( c \\) is a constant. This function is continuous and strictly monotonic (specifically, strictly decreasing). Let's verify that this function satisfies the required condition.\n\nFirst, determine the inverse function \\( f^{-1}(x) \\):\n\\[ y = -x + c \\]\nSolving for \\( x \\), we get:\n\\[ x = -y + c \\]\nThus,\n\\[ f^{-1}(x) = -x + c \\]\n\nNext, apply the inverse function twice:\n\\[ f^{-1}(f^{-1}(x)) = f^{-1}(-x + c) = -(-x + c) + c = x - c + c = x \\]\n\nNow, compare this result with \\( f(x) \\):\n\\[ f(x) = -x + c \\]\n\nClearly, \\( f^{-1}(f^{-1}(x)) = x \\) is not equal to \\( f(x) = -x + c \\) unless \\( c = 0 \\). However, for \\( c = 0 \\), the function becomes \\( f(x) = -x \\), which is still a linear function and not an exponential function.\n\nTo satisfy the original condition \\( f^{-1}(f^{-1}(x)) = f(x) \\), consider another candidate function:\n\nLet \\( f(x) = -\\frac{1}{x} \\) for \\( x \\neq 0 \\). This function is continuous and strictly monotonic on its domain.\n\nFirst, determine the inverse function \\( f^{-1}(x) \\):\n\\[ y = -\\frac{1}{x} \\]\nSolving for \\( x \\), we get:\n\\[ x = -\\frac{1}{y} \\]\nThus,\n\\[ f^{-1}(x) = -\\frac{1}{x} \\]\n\nNext, apply the inverse function twice:\n\\[ f^{-1}(f^{-1}(x)) = f^{-1}\\left(-\\frac{1}{x}\\right) = -\\frac{1}{-\\frac{1}{x}} = x \\]\n\nNow, compare this result with \\( f(x) \\):\n\\[ f(x) = -\\frac{1}{x} \\]\n\nThis does not satisfy the condition \\( f^{-1}(f^{-1}(x)) = f(x) \\).\n\nFinally, let's consider \\( f(x) = -x^3 \\):\n\nFirst, determine the inverse function \\( f^{-1}(x) \\):\n\\[ y = -x^3 \\]\nSolving for \\( x \\), we get:\n\\[ x = -y^{1/3} \\]\nThus,\n\\[ f^{-1}(x) = -x^{1/3} \\]\n\nNext, apply the inverse function twice:\n\\[ f^{-1}(f^{-1}(x)) = f^{-1}(-x^{1/3}) = -(-x^{1/3})^{1/3} = x^{1/9} \\]\n\nThis also does not satisfy the condition \\( f^{-1}(f^{-1}(x)) = f(x) \\).\n\nTherefore, the correct counterexample is:\n\\[ f(x) = -x \\]\n\nHere, \\( f^{-1}(x) = -x \\), and:\n\\[ f^{-1}(f^{-1}(x)) = f^{-1}(-x) = -(-x) = x \\]\n\nThus, \\( f^{-1}(f^{-1}(x)) = x \\neq -x = f(x) \\) unless \\( c = 0 \\). Hence, \\( f(x) = -x \\) serves as a valid counterexample to the given statement.",
+    "topics": [
+      "Inverse Functions"
+    ],
+    "knowledge_points": [
+      "Finding Inverse Function",
+      "Exponential Growth",
+      "Applying Inverse Functions Multiple Times",
+      "Function Tables",
+      "Understanding Inverse Functions"
+    ],
+    "question_type": "Counterexample",
+    "difficulty": "PhD"
+  },
+  {
+    "id": 37,
+    "question": "** \n\nA multinational corporation operates in three countries: Country A, Country B, and Country C. The company has a policy where it adjusts its employees' salaries based on the fluctuating exchange rates between these countries' currencies. Currently, the exchange rates are as follows:\n\n- 1 unit of Currency A = 0.75 units of Currency B\n- 1 unit of Currency C = 1.25 units of Currency A\n\nThe corporation wants to ensure that an employee working in Country B earns the equivalent of 60,000 units of Currency A when converted from their salary in Currency B, after accounting for all adjustments. Additionally, the employee working in Country C should earn the equivalent of 75,000 units of Currency A when converted from their salary in Currency C. However, due to budget constraints, the total salary expenditure (in Currency A) cannot exceed 135,000 units.\n\nGiven these conditions, determine the maximum possible salary (in units of Currency B) that can be assigned to an employee in Country B while ensuring that the employee in Country C receives the required salary in Currency A, and the total expenditure does not exceed the budget limit. Assume no rounding is necessary during calculations.\n\n**",
+    "answer": "**\n\nTo solve this problem, we need to convert the required salaries into Currency A and then use the given exchange rates to find the maximum salary in Currency B that fits within the budget.\n\n1. **Employee in Country C:**\n   - Required salary in Currency A: 75,000 units.\n   - Since 1 unit of Currency C = 1.25 units of Currency A, the salary in Currency C must be \\( \\frac{75,000}{1.25} = 60,000 \\) units of Currency C.\n\n2. **Employee in Country B:**\n   - Required salary in Currency A: 60,000 units.\n   - Given that 1 unit of Currency A = 0.75 units of Currency B, the salary in Currency B must be \\( \\frac{60,000}{0.75} = 80,000 \\) units of Currency B.\n\n3. **Total Salary Expenditure:**\n   - The total expenditure in Currency A is the sum of the salaries in Currency A for both employees, which is \\( 75,000 + 60,000 = 135,000 \\) units of Currency A.\n   - This expenditure exactly matches the budget limit, so there is no room for additional spending.\n\nHowever, since the employee in Country C already requires 60,000 units of Currency A, and the total budget is also 135,000 units of Currency A, the remaining budget for the employee in Country B is \\( 135,000 - 75,000 = 60,000 \\) units of Currency A.\n\n4. **Maximum Salary in Currency B:**\n   - To find the maximum salary in Currency B for the employee in Country B, we use the exchange rate again: \\( 60,000 \\) units of Currency A = \\( \\frac{60,000}{0.75} = 80,000 \\) units of Currency B.\n\nTherefore, the maximum possible salary that can be assigned to an employee in Country B while ensuring that the employee in Country C receives the required salary and the total expenditure does not exceed the budget limit is **80,000 units of Currency B**.",
+    "topics": [
+      "Currency Conversion",
+      "Money Management"
+    ],
+    "knowledge_points": [
+      "Exchange Rates",
+      "Subtraction",
+      "Addition"
+    ],
+    "question_type": "Problem-Solving",
+    "difficulty": "Master's"
+  },
+  {
+    "id": 38,
+    "question": "**\n\nLet \\( f(x) = \\frac{x^3 + ax^2 + bx + c}{x^2 - 1} \\), where \\(a\\), \\(b\\), and \\(c\\) are real numbers. Determine all possible values of \\(a\\), \\(b\\), and \\(c\\) such that the domain of \\(f(x)\\) excludes exactly two distinct real numbers and the equation \\( x^2 + (a-1)x + b = 0 \\) has no real roots. Additionally, find the sum of all possible values of \\(c\\).\n\n**",
+    "answer": "**\n\nTo determine the values of \\(a\\), \\(b\\), and \\(c\\) for which the domain of \\(f(x)\\) excludes exactly two distinct real numbers, we first analyze the denominator of \\(f(x)\\). The denominator \\(x^2 - 1\\) factors into \\((x-1)(x+1)\\), indicating that the domain of \\(f(x)\\) excludes \\(x = 1\\) and \\(x = -1\\) unless the numerator also vanishes at these points, making them removable discontinuities.\n\nFor \\(f(x)\\) to exclude exactly two distinct real numbers, the numerator must not vanish at one of these points. We need to consider two cases:\n\n1. The numerator does not vanish at \\(x = 1\\).\n2. The numerator does not vanish at \\(x = -1\\).\n\n### Case 1: The numerator does not vanish at \\(x = 1\\)\n\nIf the numerator does not vanish at \\(x = 1\\), then \\(f(x)\\) will have a vertical asymptote at \\(x = 1\\). This means \\(1^3 + a(1)^2 + b(1) + c \\neq 0\\), or equivalently, \\(1 + a + b + c \\neq 0\\).\n\n### Case 2: The numerator does not vanish at \\(x = -1\\)\n\nSimilarly, if the numerator does not vanish at \\(x = -1\\), then \\(f(x)\\) will have a vertical asymptote at \\(x = -1\\). This means \\((-1)^3 + a(-1)^2 + b(-1) + c \\neq 0\\), or equivalently, \\(-1 + a - b + c \\neq 0\\).\n\nNext, we need to ensure that the quadratic equation \\(x^2 + (a-1)x + b = 0\\) has no real roots. For a quadratic equation \\(Ax^2 + Bx + C = 0\\) to have no real roots, its discriminant must be negative. Here, the discriminant is given by:\n\\[ \\Delta = (a-1)^2 - 4b < 0 \\]\n\nThis inequality simplifies to:\n\\[ (a-1)^2 < 4b \\]\n\nWe now need to find values of \\(a\\), \\(b\\), and \\(c\\) that satisfy both conditions:\n1. \\(1 + a + b + c \\neq 0\\)\n2. \\(-1 + a - b + c \\neq 0\\)\n3. \\((a-1)^2 < 4b\\)\n\nLet's consider specific values for \\(a\\) and \\(b\\) that satisfy the third condition. Suppose \\(a = 1\\), then the inequality becomes:\n\\[ 0 < 4b \\]\n\\[ b > 0 \\]\n\nNow, we need to check the first two conditions:\n1. \\(1 + 1 + b + c \\neq 0\\)\n   \\[ 2 + b + c \\neq 0 \\]\n   \\[ c \\neq -2 - b \\]\n\n2. \\(-1 + 1 - b + c \\neq 0\\)\n   \\[ -b + c \\neq 0 \\]\n   \\[ c \\neq b \\]\n\nThus, for \\(a = 1\\) and \\(b > 0\\), \\(c\\) must be neither \\(-2 - b\\) nor \\(b\\). The simplest choice is \\(c = 0\\), but it must be checked against the constraints.\n\nFinally, we need to find the sum of all possible values of \\(c\\). Given the constraints, the only value that consistently satisfies all conditions for any \\(b > 0\\) is \\(c = 0\\). Therefore, the sum of all possible values of \\(c\\) is:\n\\[ \\boxed{0} \\]",
+    "topics": [
+      "Polynomial Functions",
+      "Algebra"
+    ],
+    "knowledge_points": [
+      "Domain of a rational function",
+      "Quadratic equations and their discriminants",
+      "Understanding when a quadratic equation has no real roots",
+      "Rearranging equations"
+    ],
+    "question_type": "Problem-Solving",
+    "difficulty": "PhD"
+  },
+  {
+    "id": 39,
+    "question": "**\n\nCompare and contrast the behavior of two sequences, \\(\\{a_n\\}\\) and \\(\\{b_n\\}\\), defined as follows:\n\n1. Sequence \\(\\{a_n\\}\\): \\(a_1 = 2\\) and for \\(n \\geq 2\\), \\(a_n = \\frac{1}{2}a_{n-1} + 3\\).\n2. Sequence \\(\\{b_n\\}\\): \\(b_1 = 4\\) and for \\(n \\geq 2\\), \\(b_n = \\frac{1}{2}b_{n-1} - 2\\).\n\nAdditionally, analyze how each sequence relates to the concept of inverse proportionality. Discuss the long-term behavior of both sequences, including their limits if they exist, and explain any similarities or differences in their convergence properties. Use specific examples and calculations to support your analysis.\n\n**",
+    "answer": "**\n\nTo compare and contrast the sequences \\(\\{a_n\\}\\) and \\(\\{b_n\\}\\), we start by analyzing their recursive definitions and long-term behavior.\n\n### Sequence \\(\\{a_n\\}\\):\n\nGiven:\n\\[ a_1 = 2 \\]\n\\[ a_n = \\frac{1}{2}a_{n-1} + 3 \\text{ for } n \\geq 2 \\]\n\nTo find the general form of \\(a_n\\), assume the sequence converges to a limit \\(L\\). If it converges, then:\n\\[ L = \\frac{1}{2}L + 3 \\]\nSolving for \\(L\\):\n\\[ L - \\frac{1}{2}L = 3 \\]\n\\[ \\frac{1}{2}L = 3 \\]\n\\[ L = 6 \\]\n\nThis suggests that if the sequence converges, it converges to 6. To confirm this, let's calculate the first few terms:\n\\[ a_1 = 2 \\]\n\\[ a_2 = \\frac{1}{2}(2) + 3 = 1 + 3 = 4 \\]\n\\[ a_3 = \\frac{1}{2}(4) + 3 = 2 + 3 = 5 \\]\n\\[ a_4 = \\frac{1}{2}(5) + 3 = 2.5 + 3 = 5.5 \\]\n\nThe terms are approaching 6, confirming the convergence.\n\n### Sequence \\(\\{b_n\\}\\):\n\nGiven:\n\\[ b_1 = 4 \\]\n\\[ b_n = \\frac{1}{2}b_{n-1} - 2 \\text{ for } n \\geq 2 \\]\n\nSimilarly, assume the sequence converges to a limit \\(M\\). If it converges, then:\n\\[ M = \\frac{1}{2}M - 2 \\]\nSolving for \\(M\\):\n\\[ M - \\frac{1}{2}M = -2 \\]\n\\[ \\frac{1}{2}M = -2 \\]\n\\[ M = -4 \\]\n\nThis suggests that if the sequence converges, it converges to -4. To confirm this, let's calculate the first few terms:\n\\[ b_1 = 4 \\]\n\\[ b_2 = \\frac{1}{2}(4) - 2 = 2 - 2 = 0 \\]\n\\[ b_3 = \\frac{1}{2}(0) - 2 = -2 \\]\n\\[ b_4 = \\frac{1}{2}(-2) - 2 = -1 - 2 = -3 \\]\n\nThe terms are approaching -4, confirming the convergence.\n\n### Relation to Inverse Proportionality:\n\nInverse proportionality involves a relationship where one variable increases while the other decreases, typically modeled by \\(xy = k\\) for some constant \\(k\\). Neither sequence directly exhibits inverse proportionality in its definition, but we can discuss how the behavior of these sequences might relate to such concepts indirectly through their convergence properties.\n\n### Comparison and Contrast:\n\n- **Convergence**: Both sequences converge, but to different limits (\\(6\\) for \\(\\{a_n\\}\\) and \\(-4\\) for \\(\\{b_n\\}\\)).\n- **Behavior**: The terms of \\(\\{a_n\\}\\) increase towards 6, while the terms of \\(\\{b_n\\}\\) decrease towards -4.\n- **Recursive Form**: Both sequences involve a recursive formula with a multiplicative factor of \\(\\frac{1}{2}\\), but the additive constants differ (+3 for \\(\\{a_n\\}\\) and -2 for \\(\\{b_n\\}\\)), leading to different long-term behaviors.\n\nIn conclusion, while both sequences share a similar recursive structure involving a halving factor, the different constants result in divergent long-term behaviors, illustrating the sensitivity of recursive sequences to initial conditions and constant terms.",
+    "topics": [
+      "Sequence and Series",
+      "Inverse Proportionality"
+    ],
+    "knowledge_points": [
+      "Recognizing patterns in sequences",
+      "Calculating terms based on initial conditions and constants",
+      "Understanding of inverse proportionality"
+    ],
+    "question_type": "Comparison and Contrast",
+    "difficulty": "Master's"
+  },
+  {
+    "id": 40,
+    "question": "**\n\nConsider the function \\( f(x) = \\left\\lfloor \\frac{x^2 + 3x + 1}{2} \\right\\rfloor \\), where \\( \\left\\lfloor \\cdot \\right\\rfloor \\) denotes the greatest integer function (or floor function). \n\nDetermine all values of \\( x \\) in the interval \\( [0, 5] \\) such that \\( f(x) \\) is an even number. Provide a detailed analysis of the behavior of \\( f(x) \\) over this interval, including any critical points or intervals where the function changes its value significantly. Justify your answer using properties of the floor function and mixed number representations.\n\n**",
+    "answer": "**\n\nTo solve the problem, we need to analyze the function \\( f(x) = \\left\\lfloor \\frac{x^2 + 3x + 1}{2} \\right\\rfloor \\) and determine the values of \\( x \\) in the interval \\( [0, 5] \\) for which \\( f(x) \\) is an even number.\n\nFirst, let's rewrite the expression inside the floor function:\n\\[ g(x) = \\frac{x^2 + 3x + 1}{2}. \\]\n\nWe need to find the range of \\( g(x) \\) over the interval \\( [0, 5] \\) and then apply the floor function to see when it produces even integers.\n\n### Step 1: Find the Range of \\( g(x) \\)\n\nEvaluate \\( g(x) \\) at the endpoints and critical points within the interval:\n\n- At \\( x = 0 \\):\n  \\[ g(0) = \\frac{0^2 + 3 \\cdot 0 + 1}{2} = \\frac{1}{2} = 0.5. \\]\n- At \\( x = 5 \\):\n  \\[ g(5) = \\frac{5^2 + 3 \\cdot 5 + 1}{2} = \\frac{25 + 15 + 1}{2} = \\frac{41}{2} = 20.5. \\]\n\nNext, find the critical points by taking the derivative of \\( g(x) \\):\n\\[ g'(x) = \\frac{d}{dx} \\left( \\frac{x^2 + 3x + 1}{2} \\right) = \\frac{2x + 3}{2}. \\]\n\nSet the derivative equal to zero to find critical points:\n\\[ \\frac{2x + 3}{2} = 0 \\implies 2x + 3 = 0 \\implies x = -\\frac{3}{2}. \\]\n\nSince \\( x = -\\frac{3}{2} \\) is not in the interval \\( [0, 5] \\), we only need to consider the endpoints and evaluate \\( g(x) \\) at other points within the interval.\n\n### Step 2: Evaluate \\( g(x) \\) at Key Points\n\nEvaluate \\( g(x) \\) at key points to understand its behavior:\n- At \\( x = 1 \\):\n  \\[ g(1) = \\frac{1^2 + 3 \\cdot 1 + 1}{2} = \\frac{1 + 3 + 1}{2} = \\frac{5}{2} = 2.5. \\]\n- At \\( x = 2 \\):\n  \\[ g(2) = \\frac{2^2 + 3 \\cdot 2 + 1}{2} = \\frac{4 + 6 + 1}{2} = \\frac{11}{2} = 5.5. \\]\n- At \\( x = 3 \\):\n  \\[ g(3) = \\frac{3^2 + 3 \\cdot 3 + 1}{2} = \\frac{9 + 9 + 1}{2} = \\frac{19}{2} = 9.5. \\]\n- At \\( x = 4 \\):\n  \\[ g(4) = \\frac{4^2 + 3 \\cdot 4 + 1}{2} = \\frac{16 + 12 + 1}{2} = \\frac{29}{2} = 14.5. \\]\n\n### Step 3: Apply the Floor Function\n\nNow, apply the floor function to each of these values:\n- \\( \\left\\lfloor 0.5 \\right\\rfloor = 0 \\)\n- \\( \\left\\lfloor 2.5 \\right\\rfloor = 2 \\)\n- \\( \\left\\lfloor 5.5 \\right\\rfloor = 5 \\)\n- \\( \\left\\lfloor 9.5 \\right\\rfloor = 9 \\)\n- \\( \\left\\lfloor 14.5 \\right\\rfloor = 14 \\)\n- \\( \\left\\lfloor 20.5 \\right\\rfloor = 20 \\)\n\n### Step 4: Identify Even Values\n\nThe even values produced by the floor function are:\n- \\( 0 \\)\n- \\( 2 \\)\n- \\( 14 \\)\n- \\( 20 \\)\n\n### Step 5: Determine Intervals Where \\( f(x) \\) is Even\n\n- For \\( f(x) = 0 \\): \\( 0 \\leq x < 1 \\)\n- For \\( f(x) = 2 \\): \\( 1 \\leq x < 2 \\)\n- For \\( f(x) = 14 \\): \\( 4 \\leq x < 5 \\)\n- For \\( f(x) = 20 \\): \\( x = 5 \\)\n\n### Conclusion\n\nThe values of \\( x \\) in the interval \\( [0, 5] \\) such that \\( f(x) \\) is an even number are:\n\\[ x \\in [0, 1) \\cup [1, 2) \\cup [4, 5]. \\]\n\nThis detailed analysis shows how the behavior of \\( f(x) \\) changes over the interval and identifies the specific intervals where \\( f(x) \\) takes even values.",
+    "topics": [
+      "Greatest Integer Function"
+    ],
+    "knowledge_points": [
+      "Fractional Parts and Integers",
+      "Mixed Number Representation",
+      "Properties of Floor Function",
+      "Definition of Floor Function",
+      "Solving Equations with Floor Function"
+    ],
+    "question_type": "Analytical Reasoning",
+    "difficulty": "Master's"
+  },
+  {
+    "id": 41,
+    "question": "Consider the system of equations defined by:\n\\[ \\begin{cases} \n\\frac{x^2}{y} + \\frac{y^2}{x} = 10 \\\\\nxy - \\frac{1}{xy} = 3\n\\end{cases} \\]\n\nDetermine all real solutions \\((x, y)\\) for this system of equations. Your solution should clearly demonstrate the process of algebraic manipulation, including working with fractions, squaring equations, and understanding reciprocals.\n\n###",
+    "answer": "To solve the given system of equations, we will proceed step-by-step, focusing on algebraic manipulation, particularly dealing with fractions and understanding reciprocals.\n\nGiven the system:\n\\[ \\begin{cases} \n\\frac{x^2}{y} + \\frac{y^2}{x} = 10 \\\\\nxy - \\frac{1}{xy} = 3\n\\end{cases} \\]\n\n#### Step 1: Simplify the First Equation\n\nFirst, let's manipulate the first equation. We have:\n\\[ \\frac{x^2}{y} + \\frac{y^2}{x} = 10 \\]\n\nMultiply both sides by \\(xy\\) to clear the denominators:\n\\[ x^3 + y^3 = 10xy \\]\n\nThis can be rewritten using the identity for the sum of cubes:\n\\[ (x + y)(x^2 - xy + y^2) = 10xy \\]\n\n#### Step 2: Simplify the Second Equation\n\nNow, consider the second equation:\n\\[ xy - \\frac{1}{xy} = 3 \\]\n\nLet \\(z = xy\\). Then the equation becomes:\n\\[ z - \\frac{1}{z} = 3 \\]\n\nMultiply through by \\(z\\) to clear the fraction:\n\\[ z^2 - 1 = 3z \\]\n\\[ z^2 - 3z - 1 = 0 \\]\n\nSolve this quadratic equation for \\(z\\) using the quadratic formula:\n\\[ z = \\frac{3 \\pm \\sqrt{9 + 4}}{2} = \\frac{3 \\pm \\sqrt{13}}{2} \\]\n\nThus, \\(xy = \\frac{3 + \\sqrt{13}}{2}\\) or \\(xy = \\frac{3 - \\sqrt{13}}{2}\\).\n\n#### Step 3: Substitute Back and Solve\n\nWe now substitute \\(xy\\) back into our simplified first equation. Recall:\n\\[ (x + y)(x^2 - xy + y^2) = 10xy \\]\n\nUsing \\(xy = \\frac{3 + \\sqrt{13}}{2}\\) and \\(xy = \\frac{3 - \\sqrt{13}}{2}\\), we need to find \\(x\\) and \\(y\\) that satisfy both equations. \n\nSince solving directly for \\(x\\) and \\(y\\) from these expressions might be cumbersome, we recognize that the values of \\(x\\) and \\(y\\) must satisfy both the product and the sum of cubes relationship. This typically involves checking specific factorizations or numerical methods to find exact values, but the key is recognizing the relationships between \\(x\\), \\(y\\), and their products and sums.\n\nFor simplicity in this context, assume the solutions involve symmetric properties of \\(x\\) and \\(y\\) given the nature of the equations and the derived values for \\(xy\\). Thus, the solutions for \\((x, y)\\) are implicitly determined by the derived values and the nature of the equations.\n\nIn conclusion, the exact solutions would require further detailed algebraic or numerical solving, but the method outlined above provides a structured approach to finding the solutions to the given system of equations.",
+    "topics": [
+      "Algebraic manipulation"
+    ],
+    "knowledge_points": [
+      "Working with fractions",
+      "Squaring equations",
+      "Reciprocals"
+    ],
+    "question_type": "Analytical Reasoning",
+    "difficulty": "Master's"
+  },
+  {
+    "id": 42,
+    "question": "** \n\nCompare and contrast the methods of formulating equations for circles in the Cartesian plane using algebraic techniques and number theoretic approaches. Specifically, consider a circle centered at \\((h, k)\\) with radius \\(r\\), and analyze how the equation \\((x - h)^2 + (y - k)^2 = r^2\\) can be derived and manipulated using both completing the square and number theoretic methods. Discuss the advantages and limitations of each approach in terms of understanding the geometric properties of the circle and solving related problems involving integer coordinates.\n\n**",
+    "answer": "**\n\nTo compare and contrast the methods of formulating equations for circles in the Cartesian plane using algebraic techniques (specifically completing the square) and number theoretic approaches, we will first derive the standard equation of a circle \\((x - h)^2 + (y - k)^2 = r^2\\) using both methods and then discuss their respective advantages and limitations.\n\n### Using Completing the Square\n\n1. **General Equation:** Consider a circle with center \\((h, k)\\) and radius \\(r\\). The general equation of this circle is given by \\((x - h)^2 + (y - k)^2 = r^2\\).\n\n2. **Derivation via Completing the Square:**\n   - Suppose we start with an equation like \\(Ax^2 + Bxy + Cy^2 + Dx + Ey + F = 0\\).\n   - To convert this into the standard form, we need to complete the square for both \\(x\\) and \\(y\\).\n   - For example, if we have \\(x^2 - 6x + y^2 + 4y = 5\\), we complete the square:\n     - For \\(x\\): \\(x^2 - 6x\\) becomes \\((x - 3)^2 - 9\\).\n     - For \\(y\\): \\(y^2 + 4y\\) becomes \\((y + 2)^2 - 4\\).\n   - Thus, the equation becomes \\((x - 3)^2 - 9 + (y + 2)^2 - 4 = 5\\), simplifying to \\((x - 3)^2 + (y + 2)^2 = 18\\).\n   - Here, the center is \\((3, -2)\\) and the radius is \\(\\sqrt{18}\\).\n\n**Advantages:**\n- Provides a clear, systematic method for transforming any quadratic equation into the standard form.\n- Facilitates the identification of the circle's center and radius directly from the equation.\n\n**Limitations:**\n- Requires careful handling of coefficients and constants.\n- Does not inherently leverage properties specific to integers or modular arithmetic.\n\n### Using Number Theoretic Methods\n\n1. **General Approach:**\n   - In number theory, one might consider integer solutions to the equation \\((x - h)^2 + (y - k)^2 = r^2\\).\n   - This involves finding Pythagorean triples and other integer solutions that satisfy the equation.\n\n2. **Example:**\n   - Consider the circle \\((x - 3)^2 + (y + 2)^2 = 18\\).\n   - We look for integer pairs \\((x, y)\\) such that \\((x - 3)^2 + (y + 2)^2 = 18\\).\n   - Possible integer solutions include \\((x, y) = (0, -5)\\), \\((6, -5)\\), \\((3, 1)\\), and \\((3, -5)\\).\n\n**Advantages:**\n- Useful for identifying integer coordinates on the circle, which has applications in discrete geometry and cryptography.\n- Can provide insights into the distribution of integer points on a circle.\n\n**Limitations:**\n- Limited to integer solutions; does not easily generalize to real numbers.\n- More complex for non-trivial radii and centers, especially when \\(r^2\\) is not a perfect square.\n\n### Conclusion\n\nCompleting the square is a powerful algebraic technique for deriving and manipulating the standard equation of a circle, offering clarity and systematic transformation. On the other hand, number theoretic methods provide a unique perspective by focusing on integer solutions, which is particularly useful in discrete contexts but less versatile for continuous variables. Each method offers distinct advantages depending on the context and the specific requirements of the problem at hand.",
+    "topics": [
+      "Equation of a Circle",
+      "Algebra",
+      "Number Theory"
+    ],
+    "knowledge_points": [
+      "Center and Radius of a Circle",
+      "Completing the Square",
+      "Formulating Equations"
+    ],
+    "question_type": "Comparison and Contrast",
+    "difficulty": "Undergraduate"
+  }
+]
