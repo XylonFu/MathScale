@@ -1,139 +1,155 @@
-# UltimateMath
+# MathScale
 
-**UltimateMath** 是一个开发框架，旨在利用大型语言模型（LLM）来生成和处理数学问题。该框架从 MATH 基础数据集中提取相关主题与知识点，构建概念知识图谱，并通过随机游走抽样（random walk sampling）来生成符合特定主题和难度等级的数学题目。整个流程从数据提取、问题生成到后处理都已高度集成且可定制，方便快速扩展。
+**MathScale** 是一个开发框架，用于利用大型语言模型（LLMs）生成、提取和处理数学问题。框架从种子数据集（MATH）入手，提取主题、知识点及相关概念，构建概念图谱，并通过随机游走抽样生成新的数学问题和解决方案。整个流程——从数据提取、问题生成到后处理——高度集成且支持自定义，为研究人员、教育工作者和开发人员提供了便捷的扩展基础。
 
-**主要特性：**
+**主要特点：**
 
-- **无缝集成 LLM：**  
-  利用大型语言模型（LLM）自动从数学问题中提取主题和知识点，并生成新的数学题目。
+- **基于 LLM 的数据提取与生成：**  
+  利用 LLM 自动从 MATH 数据集中提取主题和知识点，生成与指定主题、难度和问题类型一致的新数学问题。
 
-- **异步并发请求支持：**  
-  支持同时向 LLM API 发起多个请求，加速数据处理并提升处理规模。
+- **异步并发，支持大规模扩展：**  
+  通过异步操作处理多个 LLM 请求，支持大规模数据处理并减少处理时间。
 
-- **自定义提示与元数据：**  
-  可轻松配置提示模板、难度等级、题目类型以及其他元数据，以满足特定教学或研究需求。
+- **可自定义的提示与元数据：**  
+  细化提示模板、难度级别、问题类型等配置。根据具体目标（如教学、研究或评估）生成定制化的任务。
 
-- **知识图谱与随机游走采样：**  
-  自动构建概念图谱，并使用随机游走算法从中选取相关知识点和主题，以生成聚焦性的数学问题。  
-  *该部分算法严格复现以下论文提出的方法：*
+- **概念图谱构建与随机游走采样（MathScale 方法）：**  
+  构建提取概念的知识图谱，并通过随机游走采样识别互相关联的主题和知识点。  
+  *该方法严格复现了 MathScale 论文中描述的算法：*
 
-  > Tang, Zhengyang, Xingxing Zhang, Benyou Wang, and Furu Wei. “Mathscale: Scaling instruction tuning for mathematical reasoning.” *arXiv preprint arXiv:2403.02884 (2024).*
+  > Tang, Zhengyang, Xingxing Zhang, Benyou Wang, and Furu Wei.  
+  > 《Mathscale: Scaling instruction tuning for mathematical reasoning》  
+  > *arXiv preprint arXiv:2403.02884 (2024)*
 
-- **模块化架构：**  
-  明确的数据预处理、网络请求与响应后处理的分层设计，提高代码的可维护性和可扩展性。
+- **模块化与可扩展架构：**  
+  数据预处理、请求处理、响应后处理各部分模块化分离，便于与其他数据集、API 或 LLM 服务集成。无需修改网络逻辑即可调整提示、处理步骤和输出。
 
 ---
 
 ## 项目结构
 
 ```
-UltimateMath/
+MathScale/
 │
 ├── files/
 │   ├── MATH.json              # 合并后的 MATH 数据集
-│   ├── math_extraction.json   # 从 MATH 中提取的主题和知识点
-│   └── math_generation.json   # 生成的数学问题和答案
+│   ├── math_extraction.json   # 提取的主题与知识点
+│   └── math_generation.json   # 生成的数学问题及解决方案
 │
 ├── handlers/
-│   ├── data_extractor.py      # 后处理：从 LLM 响应中提取主题、知识点、题目、答案
-│   └── data_preparator.py     # 前处理：构造发送给 LLM 的消息和元数据
+│   ├── data_extractor.py      # 响应后处理：从 LLM 响应中提取数据
+│   └── data_preparator.py     # 请求预处理：构造 LLM 请求的提示和元数据
 │
 ├── network/
-│   ├── payload_builder.py     # 构建发送给 LLM API 的 JSON 请求载荷
+│   ├── payload_builder.py     # 构建 LLM API 的 JSON 请求载荷
 │   ├── request_manager.py     # 管理异步并发的 API 请求
-│   └── response_handler.py    # 响应处理的装饰器与实用函数
+│   └── response_handler.py    # 处理 LLM 响应的装饰器与函数
 │
 ├── utils/
-│   └── graph_algorithm.py     # 构建概念图谱与执行随机游走采样
+│   └── graph_algorithm.py     # 构建概念图谱并执行随机游走采样
 │
 ├── app.py                     # 主程序入口
-├── config.py                  # 配置文件（API URL、模型、请求头、并发限制等）
-└── prompt.py                  # 提示模板与问题类型、难度等级配置
+├── config.py                  # 配置文件（API URL、请求头、模型、并发限制）
+└── prompt.py                  # 提示模板、问题类型与难度级别
 ```
 
 ---
 
-## 核心流程
+## 快速开始
 
-1. **准备数据集：**  
-   起始数据为 MATH 数据集。根据需要合并 JSON 文件，确保将数据保存为 `files/MATH.json`。
+### 1. 准备 MATH 数据集
 
-2. **数据提取（主题与知识点）：**  
-   使用 `data_preparator.py` 中的 `construct_math_extraction_messages` 生成可用于提取主题与知识点的提示信息。示例：
-   ```python
-   messages_list, metadata_list = construct_math_extraction_messages(
-       file_path="files/MATH.json",
-       required_fields={'question': 'problem', 'answer': 'solution', 'id': 'id'},
-       num=100
-   )
-   ```
-   然后调用：
-   ```python
-   import asyncio
-   from handlers.data_extractor import extract_topics_and_knowledge_points
-   from network.response_handler import retrieve_responses
+1. 将 MATH 数据集的 JSON 文件放置或合并到 `files/MATH.json` 下。
+2. 根据需要调整代码中的 `input_directory` 和 `output_file_path`。
 
-   asyncio.run(retrieve_responses(messages_list, metadata_list, extract_topics_and_knowledge_points))
-   ```
-   提取结果会保存到 `files/math_extraction.json`。
+### 2. 提取主题与知识点
 
-3. **概念图谱构建与随机游走采样：**  
-   使用 `utils/graph_algorithm.py` 中的 `build_concept_graph` 和 `random_walk_sampling` 从提取结果中构建概念图谱并执行随机游走抽样。  
-   *该步骤严格复现了 Tang 等人（2024）的研究方法。*
+**目标：** 从 `MATH.json` 中的数学问题提取主题和知识点。
 
-4. **生成数学题目：**  
-   使用 `construct_math_generation_messages` 为生成新的数学题构造提示信息，并向 LLM 发起请求：
-   ```python
-   messages_list, metadata_list = construct_math_generation_messages(num=100)
-   ```
-   然后运行：
-   ```python
-   from handlers.data_extractor import extract_question_and_answer
-   asyncio.run(retrieve_responses(messages_list, metadata_list, extract_question_and_answer))
-   ```
-   新生成的数学题目及其答案将保存至 `files/math_generation.json`。
+```python
+from handlers.data_preparator import construct_math_extraction_messages
+from handlers.data_extractor import extract_topics_and_knowledge_points
+from network.response_handler import retrieve_responses
+import asyncio
+
+# 准备提取请求
+messages_list, metadata_list = construct_math_extraction_messages(
+    file_path="files/MATH.json",
+    required_fields={'question': 'problem', 'answer': 'solution', 'id': 'id'},
+    num=100
+)
+
+# 通过 LLM 运行提取过程
+asyncio.run(retrieve_responses(messages_list, metadata_list, extract_topics_and_knowledge_points))
+```
+
+运行完成后，提取结果将保存在 `files/math_extraction.json` 中。
+
+### 3. 构建概念图谱与随机游走采样
+
+**目标：** 基于提取的数据构建概念图谱，并通过随机游走采样识别互相关联的主题与知识点。  
+生成新问题时，该步骤会自动运行，代码内部调用 `utils/graph_algorithm.py` 中的 `build_concept_graph` 和 `random_walk_sampling`。
+
+### 4. 生成新数学问题
+
+**目标：** 生成符合选定难度级别、问题类型及提取主题与知识点的新数学问题。
+
+```python
+from handlers.data_preparator import construct_math_generation_messages
+from handlers.data_extractor import extract_question_and_answer
+
+# 准备生成请求
+messages_list, metadata_list = construct_math_generation_messages(num=100)
+
+# 通过 LLM 运行生成过程
+asyncio.run(retrieve_responses(messages_list, metadata_list, extract_question_and_answer))
+```
+
+生成的数学问题及其答案将保存在 `files/math_generation.json` 中。
 
 ---
 
-## 配置说明
+## 配置
 
-**`config.py`**  
-- **API_URL：** LLM 接口的请求地址  
-- **HEADERS：** HTTP 请求头，包括鉴权令牌  
-- **DEFAULT_PAYLOAD：** 默认请求参数（如模型名称）  
-- **MAX_CONCURRENT_REQUESTS：** 控制并发请求的最大数量
+**`config.py`** 提供核心配置：
 
-根据实际环境和凭据修改 `config.py`。
+- **API_URL：** LLM 服务的接口地址。
+- **HEADERS：** 如果需要鉴权，包含认证令牌。
+- **DEFAULT_PAYLOAD：** 指定使用的 LLM 模型及默认参数。
+- **MAX_CONCURRENT_REQUESTS：** 控制大规模批量处理的并发请求数。
+
+根据环境和使用的 LLM 服务调整这些参数。
 
 ---
 
-## 提示模板与定制化
+## 自定义
 
-**`prompt.py`**  
+**`prompt.py`** 支持生成和提取过程的自定义：
+
 - **MATH_EXTRACTION_PROMPT & MATH_GENERATION_PROMPT：**  
-  用于指导 LLM 进行主题提取或题目生成的提示模板。
+  预定义的提示模板，用于指导 LLM 提取主题或生成问题/答案。
   
 - **`question_types` & `difficulty_levels`：**  
-  定义多种题目类型和难度等级，可根据需要添加、修改以生成不同类型的数学问题。
+  定义多种问题类型（如“问题求解”“证明”）和难度级别（如“小学”“博士”）。根据教学或研究目标扩展或修改这些配置。
 
 ---
 
-## 扩展与适配
+## 扩展框架
 
 - **数据预处理：**  
-  如果需要适配新数据集或字段，修改或新增 `data_preparator.py` 中的函数。
+  针对新数据集或格式，修改 `data_preparator.py` 以生成合适的提示和元数据。
 
 - **数据后处理：**  
-  若需提取更多信息或进行额外处理，可在 `data_extractor.py` 中添加或修改函数。
+  如果需要更复杂的解析或附加元数据字段，可编辑 `data_extractor.py` 调整 LLM 响应的提取逻辑。
 
-- **网络与请求载荷：**  
-  如需更改目标 API 或模型，只需调整 `payload_builder.py` 和 `config.py` 中的设置。`request_manager.py` 与 `response_handler.py` 保证核心请求与响应流程不必修改。
+- **网络与请求载荷适配：**  
+  如果切换到其他 LLM 提供商或模型，可调整 `payload_builder.py` 和 `config.py`。核心的请求与响应逻辑无需更改。
 
 ---
 
 ## 引用
 
-如使用本代码中概念图谱与随机游走采样的相关方法，请引用以下论文：
+如果您在代码中使用了概念图谱与随机游走采样方法，请引用 MathScale 论文：
 
 ```
 @article{tang2024mathscale,
@@ -148,8 +164,8 @@ UltimateMath/
 
 ## 许可证
 
-本项目以 [MIT License](LICENSE) 协议发布。您可在协议许可范围内自由使用、修改和分发本代码。
+本项目基于 [MIT License](LICENSE) 协议开源。您可以按照许可证的条款自由使用、修改和分发代码。
 
 ---
 
-**UltimateMath** 简化并扩展了利用 LLM 进行数学问题生成、提取与处理的流程。通过集成已证实有效的概念图谱构建与随机游走采样策略，为研究人员与教育工作者提供生成高质量数学题目的灵活可扩展工具环境。
+**MathScale** 简化了基于 LLM 的数学问题生成流程。通过整合 MathScale 方法中的概念图谱与随机游走采样，为教育工作者、研究人员和开发者提供了一个强大、可扩展的数学内容生成平台。
