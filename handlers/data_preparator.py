@@ -8,117 +8,118 @@ from prompt import MATH_EXTRACTION_PROMPT, question_types, difficulty_levels, MA
 from utils.graph_algorithm import build_concept_graph, random_walk_sampling
 
 
-# 构建数学提取消息的函数
+# Function to construct math extraction messages
 def construct_math_extraction_messages(file_path, required_fields, num=100):
     """
-    通用的数据提取函数，根据文件后缀自动判断文件类型，并生成提取消息。
+    General data extraction function that automatically determines the file type
+    based on the file extension and generates extraction messages.
 
-    :param file_path: 数据文件的路径
-    :param required_fields: 字典形式，指定所需字段，如 {'question': 'problem', 'answer': 'solution', 'id': 'id'}
-    :param num: 要提取的数据条数，默认为100
-    :return: 消息列表和元数据列表
+    :param file_path: Path to the data file
+    :param required_fields: Dictionary specifying required fields, e.g., {'question': 'problem', 'answer': 'solution', 'id': 'id'}
+    :param num: Number of data entries to extract, default is 100
+    :return: List of messages and metadata
     """
 
-    # 保存数据的文件路径
+    # Path to save the data file
     save_path = "files/math_extraction.json"
 
-    # 获取文件的后缀名以确定文件类型
+    # Get the file extension to determine the file type
     _, file_extension = os.path.splitext(file_path)
     file_extension = file_extension.lower()
 
-    # 根据文件类型读取数据
+    # Read data based on the file type
     if file_extension == '.json':
-        # 读取JSON文件并将其转换为Python对象
+        # Read JSON file and convert it to a Python object
         with open(file_path, 'r', encoding='utf-8') as f:
             data = json.load(f)
     elif file_extension == '.csv':
-        # 读取CSV文件并将其转换为字典列表
+        # Read CSV file and convert it to a list of dictionaries
         data = pd.read_csv(file_path).to_dict(orient='records')
     elif file_extension == '.tsv':
-        # 读取TSV文件并将其转换为字典列表
+        # Read TSV file and convert it to a list of dictionaries
         data = pd.read_csv(file_path, sep='\t').to_dict(orient='records')
     elif file_extension == '.xlsx':
-        # 读取Excel文件并将其转换为字典列表
+        # Read Excel file and convert it to a list of dictionaries
         data = pd.read_excel(file_path).to_dict(orient='records')
     elif file_extension == '.parquet':
-        # 读取Parquet文件并将其转换为字典列表
+        # Read Parquet file and convert it to a list of dictionaries
         data = pd.read_parquet(file_path).to_dict(orient='records')
     else:
-        # 如果提供的文件类型不受支持，则抛出错误
+        # If the provided file type is unsupported, raise an error
         raise ValueError(f"Unsupported file extension: {file_extension}")
 
-    # 如果保存的文件路径存在，则读取已经处理过的数据
+    # If the save path exists, read already processed data
     if os.path.exists(save_path):
-        # 打开并加载已提取的数据文件
+        # Open and load the already extracted data file
         with open(save_path, 'r', encoding='utf-8') as ex_file:
             processed_data = json.load(ex_file)
-            processed_ids = {item['id'] for item in processed_data}  # 获取已处理的ID集合
-            existing_count = len(processed_data)  # 已处理的数据条数
+            processed_ids = {item['id'] for item in processed_data}  # Get the set of processed IDs
+            existing_count = len(processed_data)  # Number of already processed data entries
     else:
-        # 如果文件不存在，初始化为一个空集合和已处理条数为0
+        # If the file does not exist, initialize an empty set and set existing count to 0
         processed_ids = set()
         existing_count = 0
 
-    # 计算需要生成的新数据条数
+    # Calculate the number of new data entries to generate
     num_to_generate = num - existing_count
     if num_to_generate <= 0:
         print(f"Extraction: Already have {existing_count} messages, no new messages generated.")
-        return [], []  # 如果已有数据足够，则不生成新数据
+        return [], []  # If existing data is sufficient, no new data is generated
 
     messages_list = []
     metadata_list = []
 
-    # 遍历数据并生成新的提取消息
+    # Iterate through the data and generate new extraction messages
     for item in data:
         item_id = item[required_fields['id']]
         if item_id in processed_ids:
-            continue  # 跳过已经处理过的数据
+            continue  # Skip already processed data
 
-        # 从数据项中提取问题和答案
+        # Extract the question and answer from the data item
         question = item[required_fields['question']]
         answer = item[required_fields['answer']]
-        # 根据问题生成提取提示
+        # Generate extraction prompt based on the question
         prompt = MATH_EXTRACTION_PROMPT.format(question=question)
-        # 将消息添加到消息列表中
+        # Add the message to the message list
         messages_list.append([{"role": "user", "content": prompt}])
-        # 将元数据添加到元数据列表中
+        # Add the metadata to the metadata list
         metadata_list.append({"question": question, "answer": answer, "id": item_id})
 
         if len(messages_list) >= num_to_generate:
-            break  # 如果生成的数据条数达到了需要生成的数量，则停止生成
+            break  # Stop generating if the required number of data entries is reached
 
-    # 返回生成的消息列表和元数据列表
+    # Return the generated message list and metadata list
     return messages_list, metadata_list
 
 
-# 构建数学生成消息的函数
+# Function to construct math generation messages
 def construct_math_generation_messages(num=100):
-    extraction_file = 'files/math_extraction.json'  # 提取数据文件的路径
-    generation_file = 'files/math_generation.json'  # 生成数据文件的路径
+    extraction_file = 'files/math_extraction.json'  # Path to the extraction data file
+    generation_file = 'files/math_generation.json'  # Path to the generation data file
 
-    # 如果提取文件存在，则读取提取数据
+    # If the extraction file exists, read the extraction data
     if os.path.exists(extraction_file):
         with open(extraction_file, 'r', encoding='utf-8') as ex_file:
             extraction_data = json.load(ex_file)
     else:
         print("No extraction data found. Please run math_extraction.py first.")
-        exit()  # 如果提取文件不存在，提示并退出
+        exit()  # If the extraction file does not exist, prompt and exit
 
-    # 如果生成文件存在，则读取已生成的数据
+    # If the generation file exists, read already generated data
     if os.path.exists(generation_file):
         with open(generation_file, 'r', encoding='utf-8') as gen_file:
             existing_data = json.load(gen_file)
-            existing_count = len(existing_data)  # 已生成的数据条数
+            existing_count = len(existing_data)  # Number of already generated data entries
     else:
-        existing_count = 0  # 初始化已生成条数为0
+        existing_count = 0  # Initialize the count of generated entries to 0
 
-    # 计算需要生成的新数据条数
+    # Calculate the number of new data entries to generate
     num_to_generate = num - existing_count
     if num_to_generate <= 0:
         print(f"Math Generation: Already have {existing_count} messages, no new messages generated.")
-        return [], []  # 如果已有数据足够，则不生成新数据
+        return [], []  # If existing data is sufficient, no new data is generated
 
-    # 构建概念图谱并进行随机游走采样
+    # Build a concept graph and perform random walk sampling
     graph, node_type_map = build_concept_graph(extraction_data)
 
     messages_list = []
@@ -134,9 +135,9 @@ def construct_math_generation_messages(num=100):
         knowledge_points = [node for node in sampled_nodes if node_type_map.get(node) == "knowledge_point"]
 
         if not topics or not knowledge_points:
-            continue  # 如果采样结果没有有效的主题或知识点，则跳过
+            continue  # Skip if the sampling result does not have valid topics or knowledge points
 
-        # 根据生成的内容构建提示
+        # Construct the prompt based on the generated content
         prompt = MATH_GENERATION_PROMPT.format(question_type=selected_question_type,
                                                type_description=type_description,
                                                difficulty=selected_difficulty,
@@ -152,4 +153,4 @@ def construct_math_generation_messages(num=100):
             "difficulty": selected_difficulty
         })
 
-    return messages_list, metadata_list  # 返回生成的消息列表和元数据列表
+    return messages_list, metadata_list  # Return the generated message list and metadata list

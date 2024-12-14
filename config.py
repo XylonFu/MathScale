@@ -1,16 +1,16 @@
-# API的基本配置
-API_URL = "https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions"  # 请求的API地址
+# Basic API configuration
+API_URL = "https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions"  # API endpoint URL
 
-# HTTP请求头配置
+# HTTP request header configuration
 HEADERS = {
-    'Content-Type': 'application/json',  # 指定请求的数据格式为JSON
-    'Authorization': 'Bearer sk-xxxx'  # API访问所需的授权令牌
+    'Content-Type': 'application/json',  # Specify that the request data format is JSON
+    'Authorization': 'Bearer sk-xxx'  # Authorization token required for API access
 }
 
-# 默认的请求有效载荷配置
+# Default payload configuration for requests
 DEFAULT_PAYLOAD = {
-    "model": "qwen-turbo"  # 指定使用的模型
+    "model": "qwen-turbo"  # Specify the model to be used
 }
 
-# 控制并发请求的最大数量
-MAX_CONCURRENT_REQUESTS = 5  # 允许同时进行的最大并发请求数
+# Maximum number of concurrent requests
+MAX_CONCURRENT_REQUESTS = 5  # Maximum number of concurrent requests allowed

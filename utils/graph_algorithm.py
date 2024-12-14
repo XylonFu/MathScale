@@ -2,23 +2,23 @@ import math
 import random
 
 
-# 构建概念图谱的函数
+# Function to build a concept graph
 def build_concept_graph(extraction_data):
-    graph = {}  # 使用普通的字典来存储权重
+    graph = {}  # Use a plain dictionary to store weights
     node_type_map = {}
 
-    # 根据提取的数据构建图谱结构
+    # Build the graph structure based on the extracted data
     for data in extraction_data:
         topics = data.get("topics", [])
         knowledge_points = data.get("knowledge_points", [])
 
-        # 为每个主题和知识点设定节点类型
+        # Set node types for each topic and knowledge point
         for topic in topics:
             node_type_map[topic] = "topic"
         for kp in knowledge_points:
             node_type_map[kp] = "knowledge_point"
 
-        # 基于共现关系创建链接并计算权重
+        # Create links and calculate weights based on co-occurrence
         for i in range(len(topics)):
             for j in range(i + 1, len(topics)):
                 if topics[i] not in graph:
@@ -45,7 +45,7 @@ def build_concept_graph(extraction_data):
                 graph[knowledge_points[j]][knowledge_points[i]] = graph[knowledge_points[j]].get(knowledge_points[i],
                                                                                                  0) + 1
 
-    # 应用对数变换计算边的权重
+    # Apply logarithmic transformation to calculate edge weights
     for node, neighbors in graph.items():
         for neighbor in neighbors:
             graph[node][neighbor] = math.log(graph[node][neighbor] + 1e-5)
@@ -53,19 +53,19 @@ def build_concept_graph(extraction_data):
     return graph, node_type_map
 
 
-# 在图谱上进行随机游走以采样概念的函数
+# Function to perform random walk sampling on the graph
 def random_walk_sampling(graph, node_type_map, start_node):
     sampled_nodes = [start_node]
     current_node = start_node
     node_type = node_type_map[current_node]
-    visited_nodes = set(sampled_nodes)  # 记录已访问的节点
+    visited_nodes = set(sampled_nodes)  # Track visited nodes
     remaining_steps = {
-        'topic': random.randint(1, 2),  # 主题子图上的步数
-        'mixed': 1,  # 混合图上的步数
-        'knowledge_point': random.randint(0, 4)  # 知识点子图上的步数
+        'topic': random.randint(1, 2),  # Steps on the topic subgraph
+        'mixed': 1,  # Steps on the mixed graph
+        'knowledge_point': random.randint(0, 4)  # Steps on the knowledge point subgraph
     }
 
-    # 在主题子图上游走1-2步
+    # Walk on the topic subgraph for 1-2 steps
     while remaining_steps['topic'] > 0:
         if current_node not in graph or not graph[current_node]:
             break
@@ -82,7 +82,7 @@ def random_walk_sampling(graph, node_type_map, start_node):
         node_type = node_type_map[current_node]
         remaining_steps['topic'] -= 1
 
-    # 在混合图上游走1步
+    # Walk on the mixed graph for 1 step
     if node_type == "topic" and remaining_steps['mixed'] > 0:
         kp_neighbors = [(kp, graph[current_node][kp]) for kp in node_type_map if
                         node_type_map[kp] == "knowledge_point" and kp in graph[
@@ -96,7 +96,7 @@ def random_walk_sampling(graph, node_type_map, start_node):
             current_node = next_node
             remaining_steps['mixed'] -= 1
 
-    # 在知识点子图上游走0-4步
+    # Walk on the knowledge point subgraph for 0-4 steps
     while remaining_steps['knowledge_point'] > 0:
         if current_node not in graph or not graph[current_node]:
             break

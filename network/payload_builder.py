@@ -1,13 +1,13 @@
 from config import DEFAULT_PAYLOAD
 
 
-# 准备API请求的有效载荷
+# Prepare the payload for an API request
 def prepare_payload(messages, payload=None):
-    # 如果提供了自定义payload，复制它；否则使用默认payload
+    # If a custom payload is provided, copy it; otherwise, use the default payload
     payload = payload.copy() if payload else DEFAULT_PAYLOAD.copy()
 
-    # 将消息添加到payload中
+    # Add messages to the payload
     payload["messages"] = messages
 
-    # 返回最终的payload
+    # Return the final payload
     return payload

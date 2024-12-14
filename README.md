@@ -1,102 +1,156 @@
-# UltimateMath Project Documentation
+# UltimateMath
 
-## Project Overview
+**UltimateMath** is a development framework designed to leverage Large Language Models (LLMs) for generating and processing mathematical problems. It utilizes a seed dataset (MATH) to extract topics, knowledge points, and related concepts, then constructs a knowledge graph and performs random walk sampling to produce new math problems aligned with specified topics and difficulty levels. The framework streamlines the pipeline from raw data extraction to problem generation and postprocessing, enabling easy integration, customization, and scaling.
 
-**UltimateMath** is a development framework designed for generating mathematical problems and solutions. By processing the MATH seed dataset, it generates prompts for interaction with large language models (LLMs), ultimately creating new math problems and their corresponding answers. The core of this project involves using LLMs to extract topics and knowledge points from the MATH seed dataset, constructing a knowledge graph, and then performing random walk sampling on this graph to generate new mathematical problems.
+**Key Features:**
 
-**UltimateMath** provides a flexible framework that allows developers to build upon existing features and extend functionality. The framework supports asynchronous concurrent processing of requests and responses, enabling developers to focus on implementing business logic, specifically in data preprocessing and postprocessing, without worrying about the intricacies of network requests. This significantly reduces workload while improving the maintainability and reliability of the project.
+- **Seamless Integration of LLMs:**  
+  Use LLMs to extract topics, knowledge points, and generate new math problems.
+  
+- **Asynchronous Concurrent Requests:**  
+  Efficiently handle multiple requests to LLM APIs in parallel, facilitating large-scale data processing.
+  
+- **Customizable Prompts and Metadata:**  
+  Easily configure prompts, difficulty levels, question types, and other metadata to tailor generated problems.
+  
+- **Knowledge Graph Construction and Random Walk Sampling:**  
+  Automatically build a concept graph and perform random walk sampling to identify related topics and knowledge points.  
+  *This component is a faithful reproduction of the approach described in:*
+  
+  > Tang, Zhengyang, Xingxing Zhang, Benyou Wang, and Furu Wei. “Mathscale: Scaling instruction tuning for mathematical reasoning.” *arXiv preprint arXiv:2403.02884 (2024).*
+  
+- **Modular Architecture:**  
+  Clear separation of data preprocessing, network requests, and response postprocessing for maintainability and extensibility.
+
+---
 
 ## Project Structure
-
-The directory structure of the project is as follows:
 
 ```
 UltimateMath/
 │
 ├── files/
-│   ├── GSM8K.parquet         # Stores the original MATH dataset
-│   ├── math_extraction.json  # Stores extracted topics and knowledge points
-│   └── math_generation.json  # Stores generated math problems and solutions
+│   ├── MATH.json              # Merged MATH dataset file
+│   ├── math_extraction.json   # Extracted topics and knowledge points from MATH
+│   └── math_generation.json   # Generated math problems and solutions
 │
 ├── handlers/
-│   ├── data_extractor.py     # Handles data extraction from responses (postprocessing)
-│   └── data_preparator.py    # Handles message construction (preprocessing)
+│   ├── data_extractor.py      # Postprocessing: Extracts data (topics, KPs, questions, answers) from responses
+│   └── data_preparator.py     # Preprocessing: Constructs messages and metadata for API requests
 │
 ├── network/
-│   ├── payload_builder.py    # Builds request payloads
-│   ├── request_manager.py    # Manages concurrent requests
-│   └── response_handler.py   # Contains decorators and functions for handling responses
+│   ├── payload_builder.py     # Builds JSON payloads for LLM API requests
+│   ├── request_manager.py     # Manages asynchronous, concurrent API requests
+│   └── response_handler.py    # Decorators and utilities for processing LLM responses
 │
 ├── utils/
-│   └── graph_algorithm.py    # Implements knowledge graph construction and random walk sampling
+│   └── graph_algorithm.py     # Builds concept graphs and performs random walk sampling
 │
-├── app.py                    # Main program entry point
-├── config.py                 # Configuration file for API request settings
-└── prompt.py                 # Defines prompt templates and related configurations
+├── app.py                     # Main application entry point
+├── config.py                  # Configuration (API URL, model, headers, concurrency limits)
+└── prompt.py                  # Prompt templates and configurations for generation and extraction
 ```
-
-## File Descriptions
-
-### `app.py`
-
-`app.py` is the main entry point of the project. This file is responsible for invoking the message construction functions in `data_preparator.py`, passing the generated message list to the `retrieve_responses` function in `response_handler.py`, and then processing the response data using functions from `data_extractor.py`. Here is an example of how to use `app.py`:
-
-```python
-messages_list, metadata_list = construct_math_generation_messages(num=100)
-asyncio.run(retrieve_responses(messages_list, metadata_list, extract_question_and_answer))
-```
-
-In this way, developers can easily generate data and extend functionality as needed. When new business requirements arise, simply add new data processing functions in `data_preparator.py` or `data_extractor.py` without modifying the network logic code.
-
-### `config.py`
-
-The `config.py` file contains project configuration settings, including the API request URL, authorization token, the model to use, and the maximum number of concurrent requests. Developers can adjust these settings according to their needs.
-
-### `prompt.py`
-
-The `prompt.py` file is used to define templates for generating prompts. It includes templates for generating math problems and extracting topics and knowledge points, as well as configurations for various problem types and difficulty levels.
-
-### `handlers/data_preparator.py`
-
-The `data_preparator.py` file is responsible for data preprocessing. It contains functions for constructing messages for math extraction and math problem generation. These functions generate a specified number of messages and metadata.
-
-### `handlers/data_extractor.py`
-
-The `data_extractor.py` file is responsible for data postprocessing. It contains functions for extracting topics, knowledge points, questions, and answers from LLM responses. The processed data is stored in the `math_extraction.json` and `math_generation.json` files.
-
-### `network/payload_builder.py`
-
-The `payload_builder.py` file is responsible for building the payloads for API requests. It generates JSON structures that conform to API requirements based on the input message list.
-
-### `network/request_manager.py`
-
-The `request_manager.py` file is responsible for managing concurrent API requests. It uses the `aiohttp` library to handle asynchronous requests and responses and employs a semaphore to limit the number of concurrent requests.
-
-### `network/response_handler.py`
-
-The `response_handler.py` file contains decorators and functions for processing API responses. The `process_response` decorator extracts data from the response and passes it to the processing function. This file also provides the `retrieve_responses` function for batch processing messages and obtaining responses.
-
-### `utils/graph_algorithm.py`
-
-The `graph_algorithm.py` file provides algorithms for constructing knowledge graphs and performing random walk sampling on the graphs. These algorithms are used to generate math problems related to specific topics and knowledge points.
-
-## Usage Instructions
-
-When using this framework, developers should pay attention to the following:
-
-1. **Configuration File**: Set the API request URL, authorization token, and other necessary parameters in `config.py` according to the project requirements.
-2. **Preprocessing and Postprocessing**: If new data processing needs arise, add new functions in `handlers/data_preparator.py` and `handlers/data_extractor.py` without modifying the network logic code.
-3. **Prompt Templates**: Define and adjust the templates for generating prompts in `prompt.py` to fit different tasks.
-4. **Running the Project**: Run the `app.py` file to execute the entire project workflow, generating and processing math problems.
-
-## Contribution Guide
-
-Developers are welcome to contribute to the UltimateMath project by improving and extending it. Before submitting code, please follow the project's structure and style guidelines and test your code to ensure it functions correctly.
-
-## License
-
-This project is open-source under the [MIT License](LICENSE), allowing you to freely use, modify, and distribute the code.
 
 ---
 
-Through this development framework, developers can easily leverage large language models to generate new math problems. We encourage you to explore the code and customize or extend it according to your needs.
+## Core Workflow
+
+1. **Prepare the Dataset:**  
+   Start with the MATH dataset. Merge JSON files if necessary and ensure the dataset is loaded into `files/MATH.json`.
+
+2. **Data Extraction (Topics & Knowledge Points):**  
+   Use `construct_math_extraction_messages` from `data_preparator.py` to generate prompts for extraction.  
+   Run:
+   ```python
+   messages_list, metadata_list = construct_math_extraction_messages(
+       file_path="files/MATH.json",
+       required_fields={'question': 'problem', 'answer': 'solution', 'id': 'id'},
+       num=100
+   )
+   ```
+   Then send these messages to the API:
+   ```python
+   import asyncio
+   from handlers.data_extractor import extract_topics_and_knowledge_points
+   from network.response_handler import retrieve_responses
+
+   asyncio.run(retrieve_responses(messages_list, metadata_list, extract_topics_and_knowledge_points))
+   ```
+   Extracted data (topics and knowledge points) will be saved in `files/math_extraction.json`.
+
+3. **Concept Graph Construction & Random Walk Sampling:**  
+   Build a concept graph from the extracted data and sample related concepts using `build_concept_graph` and `random_walk_sampling` from `utils/graph_algorithm.py`.  
+   *This step implements the method described by Tang et al. (2024).*
+
+4. **Problem Generation:**  
+   Use `construct_math_generation_messages` to create prompts for generating new math questions aligned with specific types, difficulty levels, topics, and knowledge points:
+   ```python
+   messages_list, metadata_list = construct_math_generation_messages(num=100)
+   ```
+   Then run:
+   ```python
+   from handlers.data_extractor import extract_question_and_answer
+   asyncio.run(retrieve_responses(messages_list, metadata_list, extract_question_and_answer))
+   ```
+   Newly generated problems and answers will be stored in `files/math_generation.json`.
+
+---
+
+## Configuration
+
+**`config.py`**  
+- **API_URL:** Endpoint for the LLM API.  
+- **HEADERS:** HTTP headers including authorization token.  
+- **DEFAULT_PAYLOAD:** Default request parameters, including the model to be used.  
+- **MAX_CONCURRENT_REQUESTS:** Controls the level of concurrency for API calls.
+
+Modify `config.py` according to your environment and credentials.
+
+---
+
+## Prompt Templates and Customization
+
+**`prompt.py`**  
+- **MATH_EXTRACTION_PROMPT & MATH_GENERATION_PROMPT:**  
+  Templates guiding the LLM to extract topics or generate new questions and answers.
+  
+- **`question_types` & `difficulty_levels`:**  
+  Dictionaries defining various problem types and difficulty levels. Adjust or extend these to produce different classes of problems.
+
+---
+
+## Extending and Adapting
+
+- **Preprocessing:**  
+  To adapt the system for new datasets or fields, modify or create functions in `data_preparator.py`.
+  
+- **Postprocessing:**  
+  For new extraction logic or additional data fields, edit or add methods in `data_extractor.py`.
+  
+- **Networking and Payloads:**  
+  If the target API or model changes, adjust `payload_builder.py` and `config.py` accordingly. The core request and response flow is maintained in `request_manager.py` and `response_handler.py`.
+
+---
+
+## Citation
+
+If you use the concept graph and random walk sampling approach from this codebase, please cite the referenced paper:
+
+```
+@article{tang2024mathscale,
+  title={Mathscale: Scaling instruction tuning for mathematical reasoning},
+  author={Tang, Zhengyang and Zhang, Xingxing and Wang, Benyou and Wei, Furu},
+  journal={arXiv preprint arXiv:2403.02884},
+  year={2024}
+}
+```
+
+---
+
+## License
+
+This project is released under the [MIT License](LICENSE). You are free to use, modify, and distribute the code as permitted by the terms of the license.
+
+---
+
+**UltimateMath** simplifies and scales the creation, extraction, and generation of math problems using LLMs. By integrating a proven concept graph construction and random walk sampling approach, it offers a robust and extensible environment for researchers and educators looking to develop advanced mathematical reasoning tasks.

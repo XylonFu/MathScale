@@ -14,11 +14,11 @@ def merge_json_files(input_dir, output_file):
                     data = json.load(f)
                     if isinstance(data, list):
                         for item in data:
-                            item['id'] = id_counter
+                            item['id'] = id_counter  # Assign a unique ID to each item
                             merged_data.append(item)
                             id_counter += 1
                     elif isinstance(data, dict):
-                        data['id'] = id_counter
+                        data['id'] = id_counter  # Assign a unique ID to the dictionary
                         merged_data.append(data)
                         id_counter += 1
 
